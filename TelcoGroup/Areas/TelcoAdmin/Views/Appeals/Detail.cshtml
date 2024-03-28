@@ -1,0 +1,18 @@
+﻿@model Appeal
+@inject LanguageService language
+<h1>@language.Getkey("AppealDetails")</h1>
+<p><strong>@language.Getkey("FullName"):</strong> @Model.FullName</p>
+<p><strong>@language.Getkey("Email"):</strong> @Model.Email</p>
+<p><strong>@language.Getkey("PhoneNumber"):</strong> @Model.Phone</p>
+<p><strong>@language.Getkey("Subject"):</strong> @Model.Subject</p>
+<p><strong>@language.Getkey("Message"):</strong> @Model.Message</p>
+<p><strong>@language.Getkey("SendAt"):</strong> @Model.CreatedAt</p>
+@if (User.IsInRole("SuperAdmin"))
+{
+    <p><strong>@language.Getkey("ReadedBy"):</strong> @Model.ReadedBy</p>
+}
+
+<br />
+@* <a asp-action="Reply" asp-route-id="@Model.Id" class="btn btn-primary text-white mr-2">@language.Getkey("Reply")</a> *@
+<a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger text-white mr-2">@language.Getkey("Delete")</a>
+<a asp-action="Index" class="btn btn-secondary">@language.Getkey("GoToBack")</a>

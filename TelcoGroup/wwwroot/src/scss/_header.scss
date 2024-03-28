@@ -1,0 +1,131 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: inline-flex;
+    padding: 15px 60px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 384px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+
+    .logo {
+        display: flex;
+        align-items: flex-start;
+
+        a {
+            display: flex;
+            align-items: flex-start;
+
+            .first{
+                width: 68px;
+                height: 68px;
+                object-fit: cover;
+            }
+
+            .second{
+                width: 138px;
+                height: 68px;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .menu {
+        display: flex;
+        align-items: flex-start;
+        gap: 50px;
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            a {
+                color: #000;
+                text-align: right;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 24px */
+            }
+        }
+
+        .language{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            &:hover{
+                .langoptions {
+                    visibility: visible;
+                }
+            }
+
+            .langoptions {
+                background-color: #FFF;
+                display: flex;
+                visibility: hidden;
+                position: absolute;
+                top: 62px;
+                left: -4px;
+                z-index: 100;
+                padding: 20px 10px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                flex-direction: column;
+                transition: 0.3s ;
+
+                a {
+                    position: relative;
+
+                    &:hover {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+
+                    &::before {
+                        transition: 0.4s;
+                        content: " ";
+                        width: 0%;
+                        height: 4px;
+                        background-color:#DEFA39;
+                        color: #DEFA39;
+                        position: absolute;
+                        left: 0;
+                        bottom: -5px;
+
+                    }
+                }
+
+            }
+       
+
+            a {
+                color: #000;
+                text-align: right;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 24px */
+            }
+
+           
+
+           
+        }
+
+
+    }
+}

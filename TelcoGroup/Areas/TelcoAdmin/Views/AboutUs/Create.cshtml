@@ -1,0 +1,54 @@
+﻿@model List<AboutUs>
+@{
+    List<Language> languages = ViewBag.Languages;
+}
+<div class="row mt-3">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">@language.Getkey("CreateAboutUs")</div>
+                <hr>
+                <form method="post" enctype="multipart/form-data">
+                    @if (languages != null && languages.Count() > 0)
+                    {
+                        @for (int i = 0; i < languages.Count(); i++)
+                        {
+                            <span>@languages[i].Name</span>
+                            <div class="form-group">
+                                <label asp-for="@Model[i].GeneralDescription">@language.Getkey("GeneralDescription")</label>
+                                <textarea asp-for="@Model[i].GeneralDescription" class="form-control editor"></textarea>
+                                <span asp-validation-for="@Model[i].GeneralDescription" class="text-danger"></span>
+                            </div>
+                            <span>@languages[i].Name</span>
+                            <div class="form-group">
+                                <label asp-for="@Model[i].TopDescription">@language.Getkey("TopDescription")</label>
+                                <textarea asp-for="@Model[i].TopDescription" class="form-control editor"></textarea>
+                                <span asp-validation-for="@Model[i].TopDescription" class="text-danger"></span>
+                            </div>
+                            <span>@languages[i].Name</span>
+                            <div class="form-group">
+                                <label asp-for="@Model[i].MiddleDescription">@language.Getkey("MiddleDescription")</label>
+                                <textarea asp-for="@Model[i].MiddleDescription" class="form-control editor"></textarea>
+                                <span asp-validation-for="@Model[i].MiddleDescription" class="text-danger"></span>
+                            </div>
+                            <span>@languages[i].Name</span>
+                            <div class="form-group">
+                                <label asp-for="@Model[i].BottomDescription">@language.Getkey("BottomDescription")</label>
+                                <textarea asp-for="@Model[i].BottomDescription" class="form-control editor"></textarea>
+                                <span asp-validation-for="@Model[i].BottomDescription" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" asp-for="@Model[i].LanguageId" value="@languages[i].Id">
+                        }
+                    }
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary px-5">@language.Getkey("Submit")</button>
+                        <a asp-action="Index" class="btn btn-secondary">@language.Getkey("Cancel")</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,54 @@
+#About {
+    background-image: url(../images/linedaboutbg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 1440px;
+    height: 719.805px;
+    flex-shrink: 0;
+
+    p {
+        height: 378px;
+        overflow: hidden;
+        position: absolute;
+        left: 60px;
+        top: 191px;
+        width: 566px;
+        color: #787878;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 27px */
+    }
+
+    h1 {
+        position: absolute;
+        bottom:359.8px ;
+        right:60px ;
+        color: rgba(90, 154, 255, 0.00);
+        text-align: right;
+        -webkit-text-stroke: 3px #6CA5FF;
+        font-family: "Open Sans Hebrew Condensed";
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    h2 {
+        position: absolute;
+        bottom:160px ;
+        right:60px ;
+        color: #DEFA39;
+        text-align: right;
+        font-family: "Open Sans Hebrew Condensed";
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 200px */
+    }
+}

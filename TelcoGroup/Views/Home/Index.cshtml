@@ -1,0 +1,217 @@
+﻿@model HomeVM
+@{
+    @inject LayoutService layoutService
+    string currentCulture = await layoutService.GetCurrentLangauge();
+    IEnumerable<Setting>? settings = await layoutService.GetSettings();
+}
+<section id="Video">
+    <video autoplay muted loop src="~/src/videos/bgvideo.mp4"></video>
+    <div class="blursvg">
+        <div class="homeTexts">
+            <div class="homeCapital">
+                <h1>@settings.FirstOrDefault(s => s.Key == "HeaderTop" && s.Language!.Culture == currentCulture)?.Value</h1>
+            </div>
+            <div class="homeLower">
+                <h4>@settings.FirstOrDefault(s => s.Key == "HeaderMiddle" && s.Language!.Culture == currentCulture)?.Value</h4>
+                <p>
+                    @settings.FirstOrDefault(s => s.Key == "HeaderBottom" && s.Language!.Culture == currentCulture)?.Value
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cardPhoto">
+            <img src="~/src/images/Screenshot 2024-01-31 at 23.46 1.png" alt="">
+        </div>
+        <div class="cardDetails">
+            <div class="cardTextDetails">
+                <h1>@Model.MainSolution?.Title</h1>
+                <h2>@Model.MainSolution?.SubTitle</h2>
+                <p>@Model.MainSolution?.Description</p>
+            </div>
+            <div class="textUnderline">
+                <a asp-controller="Solutions" asp-action="Index">@language.Getkey("ReadMore")</a>
+            </div>
+            @*  <div class="miniButtons">
+            <div class="minibutton activeButton"></div>
+            <div class="minibutton"></div>
+            </div> *@
+        </div>
+    </div>
+</section>
+
+<section id="AboutHome">
+
+    <div class="allText">
+        <h1>@language.Getkey("AboutUs")</h1>
+        <div class="left">
+            <h2>@Model.AboutUs?.TopDescription</h2>
+            <h3>@Model.AboutUs?.MiddleDescription</h3>
+            <a asp-controller="AboutUs" asp-action="Index">@language.Getkey("ReadMore")</a>
+        </div>
+        <div class="right">
+            <h3>@Model.AboutUs?.BottomDescription</h3>
+        </div>
+    </div>
+
+</section>
+
+<section id="Services">
+    <h1>@language.Getkey("Services")</h1>
+    <div class="serviceCards">
+        @if (Model.Services != null)
+        {
+            @foreach (Service item in Model.Services)
+            {
+                <div class="card">
+                    <div class="cardframe">
+                        <div class="cardIcon">
+                            <img src="~/src/images/services/@item.IconPath" alt="">
+                        </div>
+                        <div class="cardTextsvsButton">
+                            <div class="cardTexts">
+                                <h2 class="title">@item.Name</h2>
+                                <p class="subtitle">@item.Description</p>
+                            </div>
+                            <a class="button" asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">@language.Getkey("View")</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</section>
+
+<section id="Complexity">
+
+    <div class="complexityTexts">
+        <h1>@language.Getkey("SolvingComplexityDeliveringSimplicity")</h1>
+        <div class="textVsButton">
+            @if (Model.Solutions != null)
+            {
+                int countSolving = 0;
+                @foreach (var solution in Model.Solutions)
+                {
+                    <div class="solutionSlider @(countSolving == 0 ? "activeSolution" : "")" data-target="@countSolving">
+                        <h2>@solution.Title</h2>
+                        <h3>
+                            @solution.Description
+                        </h3>
+                    </div>
+                    countSolving++;
+                }
+            }
+            <a class="button" asp-controller="Solutions" asp-action="Index">@language.Getkey("ReadMore")</a>
+        </div>
+    </div>
+
+    <div class="miniButtons">
+        @if (Model.Solutions != null)
+        {
+            int countSolutionBtns = 0;
+            @foreach (var item in Model.Solutions)
+            {
+                if (countSolutionBtns == 0)
+                {
+                    <div class="complexityMiniButton activeminibutton" data-index="@countSolutionBtns"></div>
+                }
+                else
+                {
+                    <div class="complexityMiniButton" data-index="@countSolutionBtns"></div>
+                }
+                countSolutionBtns++;
+            }
+        }
+    </div>
+</section>
+
+<section id="Contact">
+    <h1>@language.Getkey("ContactUs")</h1>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <div class="inputWithLabel">
+            <label for="fullname" aria-required="">@language.Getkey("FullName")<span>*</span></label>
+            <input id="fullname" placeholder="John Doe" type="text" asp-for="@Model.Appeal.FullName">
+        </div>
+        <div class="inputWithLabel">
+            <label for="email" aria-required="">@language.Getkey("Email")<span></span></label>
+            <input id="email" placeholder="i.e.,  example@example.com " type="text" asp-for="@Model.Appeal.Email">
+        </div>
+        <div class="inputWithLabel">
+            <label for="phonenumber" aria-required="">@language.Getkey("PhoneNumber")<span>*</span></label>
+            <input id="phonenumber" placeholder="+994 11 123 45 67" type="text" asp-for="@Model.Appeal.Phone">
+        </div>
+        <div class="inputWithLabel">
+            <label for="subject" aria-required="">@language.Getkey("Subject")<span></span></label>
+            <input id="subject" placeholder="i.e., Service" type="text" asp-for="@Model.Appeal.Subject">
+        </div>
+
+        <div class="messageinput">
+            <label for="message">@language.Getkey("YourMessage")<span>*</span></label>
+            <textarea style="min-width: 648px; min-height:132px ;" placeholder="i.e., I would like to..."
+                      id="message" cols="30" rows="10" asp-for="@Model.Appeal.Message"></textarea>
+        </div>
+
+        <button class="submitbutton" type="submit">@language.Getkey("Submit")</button>
+
+    </form>
+
+</section>
+
+<section id="News">
+    <h1>@language.Getkey("LatestNews")</h1>
+    <div class="newsSlider">
+        @if (Model.LatestNews != null)
+        {
+            int count = 0;
+            @foreach (var news in Model.LatestNews)
+            {
+
+                <div class="sliderLeft @(count == 0 ? "activesliderleft" : "")" data-target="@count">
+                    <h1>@news.Title</h1>
+                    <p>
+                        @news.Description
+                    </p>
+                </div>
+                count++;
+            }
+        }
+        <div class="sliderRight"></div>
+
+        <div class="newsMiniButtons">
+            @if (Model.LatestNews != null)
+            {
+                int secondCount = 0;
+                @foreach (var news in Model.LatestNews)
+                {
+                    if (secondCount == 0)
+                    {
+                        <div class="newsMiniButton activeminibutton" data-index="@secondCount"></div>
+                    }
+                    else
+                    {
+                        <div class="newsMiniButton" data-index="@secondCount"></div>
+                    }
+
+                    secondCount++;
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<section id="Partners">
+    <h1>@language.Getkey("Partners")</h1>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                @if (Model.PartnerSliders != null)
+                {
+                    @foreach (PartnerSlider partner in Model.PartnerSliders)
+                    {
+                        <li class="splide__slide"><img src="~/src/images/partnersSlide/@partner.ImagePath" alt=""></li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</section>

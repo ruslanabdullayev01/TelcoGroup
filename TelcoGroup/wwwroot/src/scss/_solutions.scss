@@ -1,0 +1,122 @@
+#Intro {
+    background-image: url(../images/solutionsbg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 440px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: auto;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        top: 95px;
+        left: 285px;
+        color: rgba(255, 255, 255, 0.00);
+        text-align: center;
+        -webkit-text-stroke: 2px #5A9AFF;
+        font-family: "Open Sans Hebrew Condensed";
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 200px */
+    }
+
+    h2 {
+        position: absolute;
+        top: 221px;
+        left: 399px;
+        display: flex;
+        width: 643px;
+        height: 123px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #DEFA39;
+        text-align: center;
+        font-family: "Open Sans Hebrew Condensed";
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        /* 70px */
+        text-transform: uppercase;
+    }
+}
+
+
+#SolutionGroups {
+    display: flex;
+    padding: 90px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    .intro {
+        width: 1000px;
+        color: #5C5B5B;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 30px */
+    }
+
+    .solutionCard {
+        display: flex;
+        // padding-left: 220px;
+        align-items: flex-start;
+        gap: 134px;
+
+        .solutionText {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+
+            .title {
+                display: flex;
+                width: 243px;
+                height: 34px;
+                overflow: hidden;
+                flex-direction: column;
+                justify-content: center;
+                color: #000;
+                font-family: Inter;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                /* 33px */
+            }
+
+            .subtitle {
+                overflow: hidden;
+                color: #5A5A5A;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                width: 376px;
+                height: 210px;
+                /* 30px */
+            }
+        }
+
+        .rectangle {
+            width: 710px;
+            height: 256px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+    }
+}

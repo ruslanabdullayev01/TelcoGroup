@@ -1,0 +1,47 @@
+﻿@model FooterVM
+@{
+    Service? firstService = ViewBag.FirstService;
+}
+<footer>
+    <div class="footerinfo">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index">
+                <img src="~/src/images/logo.png" alt="">
+                <img src="~/src/images/logo2.png" alt="">
+            </a>
+        </div>
+        <div class="footermenu">
+            <div class="homemenu">
+                <a asp-controller="Home" asp-action="Index">@language.Getkey("Home")</a>
+                <a asp-controller="AboutUs" asp-action="Index">@language.Getkey("AboutUs")</a>
+                <a asp-controller="ContactUs" asp-action="Index">@language.Getkey("ContactUs")</a>
+            </div>
+            <div class="servicemenu">
+                @if (firstService != null)
+                {
+                    <a asp-controller="Services" asp-action="Index" asp-route-id="@firstService.Id">@language.Getkey("Services")</a>
+                }
+                else
+                {
+                    <a style="cursor:pointer;">@language.Getkey("Services")</a>
+                }
+                
+                <a asp-controller="Solutions" asp-action="Index">@language.Getkey("Solutions")</a>
+                <a asp-controller="Partners" asp-action="Index">@language.Getkey("Partners")</a>
+            </div>
+            <div class="followus">
+                <p>@language.Getkey("FollowUs")</p>
+                <div class="socials">
+                    <a href="@Model.Bio?.Facebook"><img src="~/src/images/fb.svg" alt=""></a>
+                    <a href="@Model.Bio?.Twitter"><img src="~/src/images/twitter.svg" alt=""></a>
+                    <a href="@Model.Bio?.Instagram"><img src="~/src/images/insta.svg" alt=""></a>
+                </div>
+            </div>
+            <a class="button" asp-controller="ContactUs" asp-action="Index">@language.Getkey("ContactUs")</a>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <p class="copyright">@language.Getkey("Copyright")</p>
+</footer>

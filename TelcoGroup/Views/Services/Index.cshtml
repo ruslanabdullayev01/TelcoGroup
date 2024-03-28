@@ -1,0 +1,37 @@
+﻿@model ServiceVM
+<section id="ServiceSection">
+    <h1>LOREM IPSUMMMM</h1>
+    <h2>LOREM IPSUM LOREM LOREMMMMM</h2>
+</section>
+
+<section id="Service">
+    <div class="all">
+        <div class="tab-services">
+            @if (Model.Services != null)
+            {
+                foreach (var item in Model.Services)
+                {
+                    if (item.Id == Model.Service?.Id)
+                    {
+                        <div class="tab-service activetabservice">
+                            <a asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="tab-service">
+                            <a asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">@item.Name</a>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<section id="ServiceDetail">
+    <h1>@Model.Service?.Name</h1>
+    <p>
+        @Model.Service?.Description
+    </p>
+</section>

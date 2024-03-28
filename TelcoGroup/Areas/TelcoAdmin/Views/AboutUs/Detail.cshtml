@@ -1,0 +1,9 @@
+﻿@model AboutUs
+@inject LanguageService language
+<h1>@language.Getkey("AboutDetails")</h1>
+<p><strong>@language.Getkey("GeneralDescription"):</strong> @Model.GeneralDescription</p>
+<p><strong>@language.Getkey("TopDescription"):</strong> @Model.TopDescription</p>
+<p><strong>@language.Getkey("MiddleDescription"):</strong> @Model.MiddleDescription</p>
+<p><strong>@language.Getkey("BottomDescription"):</strong> @Model.BottomDescription</p>
+<br />
+<a asp-action="Index" class="btn btn-secondary">@language.Getkey("GoToBack")</a>

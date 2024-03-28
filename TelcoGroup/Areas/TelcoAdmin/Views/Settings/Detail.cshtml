@@ -1,0 +1,6 @@
+﻿@model Setting
+<h1>@language.Getkey("SettingDetails")</h1>
+<p><strong>@language.Getkey("Key"):</strong> @Model.Key</p>
+<p><strong>@language.Getkey("Value"):</strong> @Model.Value</p>
+
+<a asp-action="Index" class="btn btn-secondary">@language.Getkey("GoToBack")</a>

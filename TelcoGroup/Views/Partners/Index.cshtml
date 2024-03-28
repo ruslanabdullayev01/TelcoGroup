@@ -1,0 +1,27 @@
+﻿@model List<Partner>
+@{
+    @inject LayoutService layoutService
+    string currentCulture = await layoutService.GetCurrentLangauge();
+    IEnumerable<Setting>? settings = await layoutService.GetSettings();
+}
+<section id="PartnersHead">
+    <div class="overlay">
+        <div class="partnersTitle">
+            <h1>@language.Getkey("PARTNERSS")</h1>
+            <h2>@language.Getkey("PoweringProgressTogether")</h2>
+        </div>
+    </div>
+</section>
+
+<section id="PartnersBody">
+    <p>@settings.FirstOrDefault(s => s.Key == "PartnersPageDescription" && s.Language.Culture == currentCulture)?.Value</p>
+
+    <div class="allPartners">
+        @foreach (var item in Model)
+        {
+            <a href="@item.Link" target="_blank" class="partnersCard">
+                <img src="~/src/images/partners/@item.ImagePath" alt="">
+            </a>
+        }
+    </div>
+</section>

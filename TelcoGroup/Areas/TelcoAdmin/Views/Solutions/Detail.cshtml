@@ -1,0 +1,8 @@
+﻿@model Solution
+<h1>@language.Getkey("NewsDetails")</h1>
+<p><strong>@language.Getkey("Title"):</strong> @Model.Title</p>
+<p><strong>@language.Getkey("Title"):</strong> @Model.SubTitle</p>
+<p><strong>@language.Getkey("Description"):</strong> @Model.Description</p>
+<p><strong>@language.Getkey("CreatedAt"):</strong> @Model.CreatedAt</p>
+
+<a asp-action="Index" class="btn btn-secondary">@language.Getkey("GoToBack")</a>

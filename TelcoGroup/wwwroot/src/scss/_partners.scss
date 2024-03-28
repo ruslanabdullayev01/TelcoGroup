@@ -1,0 +1,113 @@
+#PartnersHead {
+    width: 1440px;
+    height: 440px;
+    flex-shrink: 0;
+    background-image: url(../images/partnersbg.svg);
+    margin: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        fill: rgba(5, 16, 35, 0.59);
+        background-image: url(../images/partnersbgoverlay.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+
+        .partnersTitle {
+            display: flex;
+            width: 1440px;
+            height: 330px;
+            padding: 24px 60px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            flex-shrink: 0;
+            position: absolute;
+            top: 110px;
+            left: 0px;
+
+            h1 {
+                width: 1320px;
+                color: rgba(255, 255, 255, 0.00);
+                -webkit-text-stroke: 2px#5A9AFF;
+                font-family: "Open Sans Hebrew Condensed";
+                font-size: 200px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 200px */
+            }
+
+
+            h2 {
+                width: 1320px;
+                color: #DEFA39;
+                text-align: right;
+                font-family: "Open Sans Hebrew Condensed";
+                font-size: 70px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 70px */
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+#PartnersBody {
+    display: flex;
+    padding: 90px 126px;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin: auto;
+    width: 1440px;
+
+    p {
+        width: 1000px;
+        color: #5C5B5B;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 30px */
+    }
+
+    .allPartners {
+        display: flex;
+        width: 1188px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        .partnersCard {
+            display: flex;
+            width: 178px;
+            height: 178px;
+            padding: 0px 28px;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+            flex-shrink: 0;
+            background: #FFF;
+            box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.05);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
