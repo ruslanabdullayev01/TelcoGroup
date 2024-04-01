@@ -29,7 +29,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<News> query = _db.News.Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
+            IQueryable<News> query = _db.News.Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<News>.Create(query, pageIndex, 10, 10));
         }
         #endregion
@@ -53,34 +53,34 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             }
 
             #region Image
-            if (models[0].Photo != null)
-            {
-                if (!(models[0].Photo.CheckFileContenttype("image/jpeg") || models[0].Photo.CheckFileContenttype("image/png")))
-                {
-                    ModelState.AddModelError("[0].Photo", $"{models[0].Photo.FileName} is not the correct format");
-                    return View(models);
-                }
+            //if (models[0].Photo != null)
+            //{
+            //    if (!(models[0].Photo.CheckFileContenttype("image/jpeg") || models[0].Photo.CheckFileContenttype("image/png")))
+            //    {
+            //        ModelState.AddModelError("[0].Photo", $"{models[0].Photo.FileName} is not the correct format");
+            //        return View(models);
+            //    }
 
-                if (models[0].Photo.CheckFileLength(5120))
-                {
-                    ModelState.AddModelError("[0].Photo", $"Photo must be less than 5 mb");
-                    return View(models);
-                }
+            //    if (models[0].Photo.CheckFileLength(5120))
+            //    {
+            //        ModelState.AddModelError("[0].Photo", $"Photo must be less than 5 mb");
+            //        return View(models);
+            //    }
 
-                models[0].ImagePath = await models[0].Photo.CreateFileAsync(_env, "src", "images", "news");
-            }
-            else
-            {
-                ModelState.AddModelError("[0].Photo", "Image is empty");
-                return View(models);
-            }
+            //    models[0].ImagePath = await models[0].Photo.CreateFileAsync(_env, "src", "images", "news");
+            //}
+            //else
+            //{
+            //    ModelState.AddModelError("[0].Photo", "Image is empty");
+            //    return View(models);
+            //}
             #endregion
 
             News? temp = await _db.News.OrderByDescending(a => a.Id).FirstOrDefaultAsync();
             string currentUsername = _userManager.GetUserName(HttpContext.User);
             foreach (News item in models)
             {
-                item.ImagePath = models[0].ImagePath;
+                //item.ImagePath = models[0].ImagePath;
                 item.LanguageGroup = temp != null ? temp.LanguageGroup + 1 : 1;
                 item.CreatedAt = DateTime.UtcNow.AddHours(4);
                 item.CreatedBy = currentUsername;
@@ -134,37 +134,37 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             }
 
             #region Image
-            if (news[0].Photo != null)
-            {
-                if (!(news[0].Photo.CheckFileContenttype("image/jpeg") || news[0].Photo.CheckFileContenttype("image/png")))
-                {
-                    ModelState.AddModelError("[0].Photo", $"{news[0].Photo.FileName} is not the correct format");
-                    return View(news);
-                }
+            //if (news[0].Photo != null)
+            //{
+            //    if (!(news[0].Photo.CheckFileContenttype("image/jpeg") || news[0].Photo.CheckFileContenttype("image/png")))
+            //    {
+            //        ModelState.AddModelError("[0].Photo", $"{news[0].Photo.FileName} is not the correct format");
+            //        return View(news);
+            //    }
 
-                if (news[0].Photo.CheckFileLength(5120))
-                {
-                    ModelState.AddModelError("[0].Photo", $"Photo must be less than 5 mb");
-                    return View(news);
-                }
+            //    if (news[0].Photo.CheckFileLength(5120))
+            //    {
+            //        ModelState.AddModelError("[0].Photo", $"Photo must be less than 5 mb");
+            //        return View(news);
+            //    }
 
-                string previousFilePath = dbNewss[0].ImagePath;
-                if (previousFilePath != null)
-                {
-                    FileHelper.DeleteFile(previousFilePath, _env, "src", "images", "news");
-                }
-                string imagePath = await news[0].Photo.CreateFileAsync(_env, "src", "images", "news");
-                foreach (News news1 in dbNewss)
-                {
-                    news1.ImagePath = imagePath;
-                }
-            }
+            //    string previousFilePath = dbNewss[0].ImagePath;
+            //    if (previousFilePath != null)
+            //    {
+            //        FileHelper.DeleteFile(previousFilePath, _env, "src", "images", "news");
+            //    }
+            //    string imagePath = await news[0].Photo.CreateFileAsync(_env, "src", "images", "news");
+            //    foreach (News news1 in dbNewss)
+            //    {
+            //        news1.ImagePath = imagePath;
+            //    }
+            //}
             #endregion
 
-            string currentUsername = _userManager.GetUserName(HttpContext.User);
+            string? currentUsername = _userManager.GetUserName(HttpContext.User);
             foreach (News item in news)
             {
-                News dbNews = dbNewss.FirstOrDefault(s => s.LanguageId == item.LanguageId);
+                News? dbNews = dbNewss.FirstOrDefault(s => s.LanguageId == item.LanguageId);
                 dbNews.Title = item.Title.Trim();
                 dbNews.Description = item.Description.Trim();
                 dbNews.UpdatedAt = DateTime.UtcNow.AddHours(4);
@@ -190,7 +190,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
 
             News? news = await _db.News
                 .Include(x => x.Language)
-                .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language.Culture == CultureInfo.CurrentCulture.Name); ;
+                .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language!.Culture == CultureInfo.CurrentCulture.Name); ;
             if (news == null) return BadRequest();
             return View(news);
         }
@@ -212,11 +212,11 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
                                        .Where(c => c.LanguageGroup == firstNews.LanguageGroup && c.IsDeleted == false)
                                        .ToListAsync();
 
-            string currentUsername = _userManager.GetUserName(HttpContext.User);
+            string? currentUsername = _userManager.GetUserName(HttpContext.User);
             foreach (News news in newses)
             {
                 if (news == null) return NotFound();
-                FileHelper.DeleteFile(news.ImagePath, _env, "src", "images", "news");
+                //FileHelper.DeleteFile(news.ImagePath, _env, "src", "images", "news");
                 news.IsDeleted = true;
                 news.DeletedBy = currentUsername;
                 news.DeletedAt = DateTime.UtcNow.AddHours(4);

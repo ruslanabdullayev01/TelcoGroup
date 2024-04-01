@@ -8,15 +8,15 @@
             <div class="card-body">
                 <div class="card-title">@language.Getkey("UpdateNews")</div>
                 <hr>
-                <div style="margin:5px">
+               @*  <div style="margin:5px">
                     <img style="width:150px; height:100px;object-fit:contain;" src="~/src/images/news/@Model[0].ImagePath">
-                </div>
+                </div> *@
                 <form method="post" enctype="multipart/form-data">
-                    <div class="form-group">
+                  @*   <div class="form-group">
                         <label asp-for="@Model[0].Photo">@language.Getkey("Image")</label>
                         <input accept="image/*" asp-for="@Model[0].Photo" class="form-control">
                         <span asp-validation-for="@Model[0].Photo" class="text-danger"></span>
-                    </div>
+                    </div> *@
                     @if (languages != null && languages.Count() > 0)
                     {
                         @for (int i = 0; i < languages.Count(); i++)
