@@ -169,7 +169,7 @@
                 <div class="sliderLeft @(count == 0 ? "activesliderleft" : "")" data-target="@count">
                     <h1>@news.Title</h1>
                     <p>
-                        @news.Description
+                        @Html.Raw(news.Description)
                     </p>
                 </div>
                 count++;

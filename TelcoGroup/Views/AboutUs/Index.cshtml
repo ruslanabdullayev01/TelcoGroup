@@ -1,7 +1,7 @@
 ﻿@model AboutUs
 <section id="About">
 
-    <p>@Model?.GeneralDescription</p>
+    <p>@Html.Raw(Model?.GeneralDescription)</p>
     @Html.Raw(language.Getkey("AboutUsMod"))
 
 </section>
