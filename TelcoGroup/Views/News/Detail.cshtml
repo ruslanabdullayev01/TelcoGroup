@@ -1,0 +1,11 @@
+﻿@model News
+<section id="NewsDetail">
+    <div class="allDetail">
+        <h1>@Model.Title</h1>
+        <div class="newsMainImage">
+            <img src="~/src/images/newsbgmain.jpeg" alt="">
+        </div>
+
+        <p>@Html.Raw(Model.Description)</p>
+    </div>
+</section>

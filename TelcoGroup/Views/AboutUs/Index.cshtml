@@ -1,7 +1,17 @@
 ﻿@model AboutUs
-<section id="About">
+@* <section id="About">
 
     <p>@Html.Raw(Model?.GeneralDescription)</p>
     @Html.Raw(language.Getkey("AboutUsMod"))
 
+</section> *@
+
+<section id="About">
+    <div class="aboutSectionimage">
+        <img src="~/src/images/lastaboutbg.svg" alt="">
+    </div>
+
+    <div class="aboutSectionText">
+        <p>@Html.Raw(Model?.GeneralDescription)</p>
+    </div>
 </section>

@@ -290,6 +290,10 @@
   <data name="LatestNews" xml:space="preserve">
     <value>LATEST NEWS</value>
   </data>
+  <data name="LatestNewsMod" xml:space="preserve">
+    <value>&lt;h1&gt;LATEST&lt;/h1&gt;
+ &lt;h3&gt;NEWS&lt;/h3&gt;</value>
+  </data>
   <data name="Link" xml:space="preserve">
     <value>Link</value>
   </data>

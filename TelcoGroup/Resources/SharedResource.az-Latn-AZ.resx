@@ -290,6 +290,10 @@
   <data name="LatestNews" xml:space="preserve">
     <value>SON XƏBƏRLƏR</value>
   </data>
+  <data name="LatestNewsMod" xml:space="preserve">
+    <value>&lt;h1&gt;SON&lt;/h1&gt;
+ &lt;h3&gt;XƏBƏRLƏR&lt;/h3&gt;</value>
+  </data>
   <data name="Link" xml:space="preserve">
     <value>Link</value>
   </data>
