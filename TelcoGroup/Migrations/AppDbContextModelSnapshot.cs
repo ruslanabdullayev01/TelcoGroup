@@ -210,7 +210,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("AboutUs");
+                    b.ToTable("AboutUs", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Appeal", b =>
@@ -273,7 +273,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Appeals");
+                    b.ToTable("Appeals", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Bio", b =>
@@ -340,7 +340,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("Bios");
+                    b.ToTable("Bios", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Language", b =>
@@ -361,7 +361,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Languages");
+                    b.ToTable("Languages", (string)null);
 
                     b.HasData(
                         new
@@ -428,7 +428,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("News");
+                    b.ToTable("News", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Partner", b =>
@@ -468,7 +468,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Partners");
+                    b.ToTable("Partners", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.PartnerSlider", b =>
@@ -505,7 +505,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PartnerSliders");
+                    b.ToTable("PartnerSliders", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Service", b =>
@@ -558,7 +558,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Setting", b =>
@@ -588,7 +588,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.Solution", b =>
@@ -644,7 +644,7 @@ namespace TelcoGroup.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("Solutions");
+                    b.ToTable("Solutions", (string)null);
                 });
 
             modelBuilder.Entity("TelcoGroup.Models.User", b =>
