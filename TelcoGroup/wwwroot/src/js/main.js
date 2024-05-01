@@ -120,3 +120,60 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 });
+
+
+//Mobile menu
+const mobileMenuBtn = document.querySelector(".mobileMenuBtn");
+const closeMenu = document.querySelector(".closeMenu");
+const menuBar = document.querySelector(".menuBar");
+const menuItems = document.querySelectorAll(".menuList .menuItem");
+
+mobileMenuBtn.addEventListener("click", function () {
+    menuBar.classList.add("showMobileMenu");
+});
+
+closeMenu.addEventListener("click", function () {
+    menuBar.classList.remove("showMobileMenu");
+});
+
+menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
+        menuBar.classList.remove("showMobileMenu");
+    });
+});
+
+//language div activator
+const mobileLanguageDiv = document.querySelector(
+    ".menuBar .menuOverlay .language"
+);
+const mobileAdditionalLanguageDiv = document.querySelector(
+    ".menuBar .menuOverlay .language .langoptions"
+);
+
+mobileLanguageDiv.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (mobileAdditionalLanguageDiv.style.display == "block") {
+        mobileAdditionalLanguageDiv.style.display = "none";
+    } else {
+        mobileAdditionalLanguageDiv.style.display = "block";
+    }
+});
+
+//language changer
+const mobileLanguages = document.querySelectorAll(
+    ".menuBar .menuOverlay .language .lang"
+);
+const mobilePrevLang = document.querySelector(
+    ".menuBar .menuOverlay .language .lang .selectedLang"
+);
+
+// const selectedLang
+mobileLanguages.forEach((language) => {
+    language.addEventListener("click", (e) => {
+        const prevLangText = mobilePrevLang.textContent;
+        const lang = language.textContent;
+        e.target.textContent = prevLangText;
+        mobilePrevLang.textContent = lang;
+        mobileAdditionalLanguageDiv.style.display = "none";
+    });
+});

@@ -147,8 +147,13 @@
 
         <div class="messageinput">
             <label for="message">@language.Getkey("YourMessage")<span>*</span></label>
-            <textarea style="min-width: 648px; min-height:132px ;" placeholder="i.e., I would like to..."
-                      id="message" cols="30" rows="10" asp-for="@Model.Appeal.Message"></textarea>
+            <textarea asp-for="@Model.Appeal.Message" style="min-height: 132px"
+                      placeholder="i.e., I would like to..."
+                      id="message"
+                      cols="30"
+                      rows="10"
+                      data-val="true"
+                      data-val-required="The Message field is required."></textarea>
         </div>
 
         <button class="submitbutton" type="submit">@language.Getkey("Submit")</button>

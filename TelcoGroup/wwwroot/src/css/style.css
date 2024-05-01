@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -35,7 +40,7 @@ ul {
     width: 44px;
     height: 14px !important;
     flex-shrink: 0;
-    background: #8FC5FF !important;
+    background: #8fc5ff !important;
 }
 
 .activesliderleft {
@@ -47,17 +52,17 @@ ul {
 }
 
 .activetabservice {
-    background-color: #DEFA39 !important;
+    background-color: #defa39 !important;
 }
 
-.solutionSlider{
-    display:none;
+.solutionSlider {
+    display: none;
 }
 
 .activeminibutton {
     width: 44px !important;
     height: 14px !important;
-    background: #8FC5FF !important;
+    background: #8fc5ff !important;
 }
 
 header {
@@ -191,7 +196,7 @@ footer {
     height: 362px;
     flex-shrink: 0;
     /*border: 1px solid rgba(0, 0, 0, 0.03);*/
-    background: #FEFEFE;
+    background: #fefefe;
 }
 
     footer .footerinfo {
@@ -229,7 +234,7 @@ footer {
             }
 
                 footer .footerinfo .footermenu .homemenu a {
-                    color: #1E2833;
+                    color: #1e2833;
                     font-family: Inter;
                     font-size: 15px;
                     font-style: normal;
@@ -246,7 +251,7 @@ footer {
             }
 
                 footer .footerinfo .footermenu .servicemenu a {
-                    color: #1E2833;
+                    color: #1e2833;
                     font-family: Inter;
                     font-size: 15px;
                     font-style: normal;
@@ -264,7 +269,7 @@ footer {
 
                 footer .footerinfo .footermenu .followus p {
                     width: 84px;
-                    color: #0052D4;
+                    color: #0052d4;
                     font-family: Inter;
                     font-size: 17px;
                     font-style: normal;
@@ -314,7 +319,7 @@ footer {
                         }
 
             footer .footerinfo .footermenu .button {
-                color: #FFF;
+                color: #fff;
                 text-align: center;
                 font-family: Inter;
                 font-size: 15px;
@@ -329,7 +334,7 @@ footer {
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-                background: #001A42;
+                background: #001a42;
             }
 
     footer .copyright {
@@ -337,7 +342,7 @@ footer {
         top: 293px;
         left: 543px;
         width: 354px;
-        color: #1E2833;
+        color: #1e2833;
         text-align: center;
         font-family: Inter;
         font-size: 15px;
@@ -397,7 +402,7 @@ footer {
             #Video .blursvg .homeTexts .homeCapital {
                 width: 872px;
                 height: auto;
-                overflow:hidden;
+                overflow: hidden;
             }
 
                 #Video .blursvg .homeTexts .homeCapital h1 {
@@ -409,7 +414,7 @@ footer {
                     flex-direction: column;
                     justify-content: center;
                     flex-shrink: 0;
-                    color: #DEFA39;
+                    color: #defa39;
                     font-family: "Open Sans Hebrew Condensed";
                     font-size: 96px;
                     font-style: normal;
@@ -431,7 +436,7 @@ footer {
                     flex-direction: column;
                     justify-content: center;
                     flex-shrink: 0;
-                    color: #FFF;
+                    color: #fff;
                     font-family: "Open Sans Hebrew Condensed";
                     font-size: 36px;
                     font-style: normal;
@@ -442,7 +447,7 @@ footer {
 
                 #Video .blursvg .homeTexts .homeLower p {
                     width: 784px;
-                    color: #FFF;
+                    color: #fff;
                     font-family: "Inter";
                     font-size: 20px;
                     font-style: normal;
@@ -472,7 +477,7 @@ footer {
             height: 214px;
             justify-content: center;
             align-items: center;
-            background: #FFF;
+            background: #fff;
             overflow: hidden;
         }
 
@@ -500,20 +505,20 @@ footer {
 
                 #Video .card .cardDetails .cardTextDetails h1 {
                     width: 300px;
-                    color: #FFF;
+                    color: #fff;
                     font-family: "Open Sans Hebrew Condensed";
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: 150%;
-                    height:48px;
-                    overflow:hidden;
+                    height: 48px;
+                    overflow: hidden;
                     /* 48px */
                 }
 
                 #Video .card .cardDetails .cardTextDetails h2 {
                     width: 300px;
-                    color: #FFF;
+                    color: #fff;
                     font-family: "Open Sans Hebrew Condensed";
                     font-size: 20px;
                     font-style: normal;
@@ -530,14 +535,14 @@ footer {
                     height: auto;
                     flex-direction: column;
                     justify-content: center;
-                    color: #FFF;
+                    color: #fff;
                     font-family: "Inter";
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 200;
                     line-height: 150%;
-                    height:80px;
-                    overflow:hidden;
+                    height: 80px;
+                    overflow: hidden;
                     /* 27px */
                 }
 
@@ -549,7 +554,7 @@ footer {
 
                 #Video .card .cardDetails .textUnderline a {
                     width: 100%;
-                    color: #DEFA39;
+                    color: #defa39;
                     font-family: "Inter";
                     font-size: 20px;
                     font-style: normal;
@@ -557,8 +562,8 @@ footer {
                     line-height: 150%;
                     /* 30px */
                     text-decoration-line: underline;
-                    height:30px;
-                    overflow:hidden;
+                    height: 30px;
+                    overflow: hidden;
                 }
 
             #Video .card .cardDetails .miniButtons {
@@ -572,7 +577,7 @@ footer {
                     width: 44px;
                     height: 8px;
                     flex-shrink: 0;
-                    background: #FFF;
+                    background: #fff;
                     cursor: pointer;
                 }
 
@@ -629,7 +634,7 @@ footer {
                 height: 48px;
                 flex-direction: column;
                 justify-content: center;
-                color: #FFF;
+                color: #fff;
                 font-family: "Open Sans Hebrew Condensed";
                 font-size: 36px;
                 font-style: normal;
@@ -641,7 +646,7 @@ footer {
             #AboutHome .allText .left h3 {
                 overflow: hidden;
                 width: 670px;
-                color: #FFF;
+                color: #fff;
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
@@ -651,14 +656,14 @@ footer {
             }
 
             #AboutHome .allText .left a {
-                background: #FFF;
+                background: #fff;
                 display: flex;
                 height: 44px;
                 padding: 10px 30px;
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-                color: #48A2FF;
+                color: #48a2ff;
                 text-align: center;
                 font-family: Inter;
                 font-size: 15px;
@@ -751,23 +756,35 @@ footer {
 
                 #Services .serviceCards .card:hover .cardframe .cardTextsvsButton .cardTexts {
                     gap: 16px;
-                    height:117px;
+                    height: 117px;
                 }
 
-                    #Services .serviceCards .card:hover .cardframe .cardTextsvsButton .cardTexts .title {
+                    #Services
+                    .serviceCards
+                    .card:hover
+                    .cardframe
+                    .cardTextsvsButton
+                    .cardTexts
+                    .title {
                         font-size: 36px;
                         width: 222px;
                         height: 54px;
                     }
 
-                    #Services .serviceCards .card:hover .cardframe .cardTextsvsButton .cardTexts .subtitle {
+                    #Services
+                    .serviceCards
+                    .card:hover
+                    .cardframe
+                    .cardTextsvsButton
+                    .cardTexts
+                    .subtitle {
                         font-size: 20px;
                         width: 222px;
                         height: 79px;
                     }
 
                 #Services .serviceCards .card:hover .cardframe .cardTextsvsButton .button {
-                    background-color: #DEFA39;
+                    background-color: #defa39;
                     color: black;
                     width: 150px;
                     height: 48px;
@@ -792,7 +809,7 @@ footer {
                     justify-content: center;
                     align-items: center;
                     flex-shrink: 0;
-                    background: #323B45;
+                    background: #323b45;
                 }
 
                     #Services .serviceCards .card .cardframe .cardIcon img {
@@ -810,7 +827,7 @@ footer {
                     align-items: flex-start;
                     gap: 32px;
                     flex-shrink: 0;
-                    background: #FFF;
+                    background: #fff;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
                 }
 
@@ -834,12 +851,18 @@ footer {
                             font-style: normal;
                             font-weight: 700;
                             line-height: 150%;
-                            height:48px;
-                            overflow:hidden;
+                            height: 48px;
+                            overflow: hidden;
                             /* 48px */
                         }
 
-                        #Services .serviceCards .card .cardframe .cardTextsvsButton .cardTexts .subtitle {
+                        #Services
+                        .serviceCards
+                        .card
+                        .cardframe
+                        .cardTextsvsButton
+                        .cardTexts
+                        .subtitle {
                             width: 194px;
                             color: #000;
                             font-family: Inter;
@@ -848,7 +871,7 @@ footer {
                             font-weight: 300;
                             line-height: 150%;
                             height: 54px;
-                            overflow:hidden;
+                            overflow: hidden;
                             /* 27px */
                         }
 
@@ -862,7 +885,7 @@ footer {
                         gap: 10px;
                         flex-shrink: 0;
                         background: #000;
-                        color: #FFF;
+                        color: #fff;
                         text-align: center;
                         font-family: Inter;
                         font-size: 15px;
@@ -964,7 +987,7 @@ footer {
                 font-weight: 600;
                 line-height: 150%;
                 /* 22.5px */
-                background: #DEFA39;
+                background: #defa39;
             }
 
     #Complexity .miniButtons {
@@ -983,7 +1006,7 @@ footer {
             width: 44px;
             height: 8px;
             flex-shrink: 0;
-            background: #001A42;
+            background: #001a42;
             cursor: pointer;
         }
 
@@ -1058,7 +1081,7 @@ footer {
             }
 
                 #Contact form .inputWithLabel label span {
-                    color: #D70101;
+                    color: #d70101;
                     font-family: Inter;
                     font-size: 16px;
                     font-style: normal;
@@ -1067,7 +1090,7 @@ footer {
                 }
 
             #Contact form .inputWithLabel input {
-                background-color: #F8F8F8;
+                background-color: #f8f8f8;
                 display: flex;
                 width: 312px;
                 height: 58px;
@@ -1125,7 +1148,7 @@ footer {
             }
 
                 #Contact form .messageinput label span {
-                    color: #D70101;
+                    color: #d70101;
                     font-family: Inter;
                     font-size: 16px;
                     font-style: normal;
@@ -1135,10 +1158,12 @@ footer {
 
             #Contact form .messageinput textarea {
                 border: 1px solid rgb(0, 0, 0);
-                background-color: #F8F8F8;
+                background-color: #f8f8f8;
                 display: flex;
                 max-width: 648px;
                 max-height: 132px;
+                width: 648px;
+                height: 132px;
                 flex-direction: column;
                 align-items: flex-start;
                 flex-shrink: 0;
@@ -1155,7 +1180,7 @@ footer {
             align-items: center;
             gap: 10px;
             flex-shrink: 0;
-            background: #DEFA39;
+            background: #defa39;
             color: #000;
             text-align: center;
             font-family: Inter;
@@ -1286,7 +1311,7 @@ footer {
                 width: 44px;
                 height: 8px;
                 flex-shrink: 0;
-                background: #001A42;
+                background: #001a42;
             }
 
 #Partners {
@@ -1303,7 +1328,7 @@ footer {
 }
 
     #Partners h1 {
-        color: #DEFA39;
+        color: #defa39;
         text-align: center;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 96px;
@@ -1363,7 +1388,7 @@ footer {
     width: 1440px;
     height: 720px;
     flex-shrink: 0;
-    background-image: url(../images/service1bg.jpeg);
+    background-image: url(../images/service1bg.jpg);
     background-size: cover;
     background-position: center;
     margin: auto;
@@ -1376,7 +1401,7 @@ footer {
         width: 1240px;
         color: rgba(255, 255, 255, 0);
         text-align: center;
-        -webkit-text-stroke: 2px #5A9AFF;
+        -webkit-text-stroke: 2px #5a9aff;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 200px;
         font-style: normal;
@@ -1392,7 +1417,7 @@ footer {
         top: 375px;
         left: 170px;
         width: 1100px;
-        color: #DEFA39;
+        color: #defa39;
         text-align: center;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 96px;
@@ -1448,7 +1473,7 @@ footer {
         gap: 10px;
         width: 399px;
         height: 80px;
-        fill: #DEFA39;
+        fill: #defa39;
         background-image: url(../images/buttonbg.svg);
         background-position: right;
         background-size: contain;
@@ -1493,7 +1518,7 @@ footer {
 
     #ServiceDetail P {
         width: 1000px;
-        color: #5C5B5B;
+        color: #5c5b5b;
         font-family: Inter;
         font-size: 20px;
         font-style: normal;
@@ -1511,7 +1536,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    background: #1F2226;
+    background: #1f2226;
     background-image: url(../images/contactbg.png);
     background-size: cover;
     background-position-x: 450px;
@@ -1551,7 +1576,7 @@ footer {
                 width: 1340px;
                 flex-shrink: 0;
                 color: rgba(255, 255, 255, 0);
-                -webkit-text-stroke: 2px #5A9AFF;
+                -webkit-text-stroke: 2px #5a9aff;
                 font-family: "Open Sans Hebrew Condensed";
                 font-size: 180px;
                 font-style: normal;
@@ -1566,7 +1591,7 @@ footer {
                 left: 450px;
                 width: 792px;
                 flex-shrink: 0;
-                color: #DEFA39;
+                color: #defa39;
                 font-family: "Open Sans Hebrew Condensed";
                 font-size: 100px;
                 font-style: normal;
@@ -1609,7 +1634,7 @@ footer {
                     gap: 4px;
                     color: #000;
                     font-family: Inter;
-                    color: #A3A3A3;
+                    color: #a3a3a3;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 500;
@@ -1618,7 +1643,7 @@ footer {
                 }
 
                     #ContactHead .overlay form .inputWithLabel label span {
-                        color: #D70101;
+                        color: #d70101;
                         font-family: Inter;
                         font-size: 16px;
                         font-style: normal;
@@ -1691,12 +1716,12 @@ footer {
                     font-style: normal;
                     font-weight: 500;
                     line-height: 150%;
-                    color: #A3A3A3;
+                    color: #a3a3a3;
                     /* 24px */
                 }
 
                     #ContactHead .overlay form .messageinput label span {
-                        color: #D70101;
+                        color: #d70101;
                         font-family: Inter;
                         font-size: 16px;
                         font-style: normal;
@@ -1754,7 +1779,7 @@ footer {
                 align-items: center;
                 gap: 10px;
                 flex-shrink: 0;
-                background: #DEFA39;
+                background: #defa39;
                 color: #000;
                 text-align: center;
                 font-family: Inter;
@@ -1816,7 +1841,7 @@ footer {
 
                     #ContactHead .overlay .contactInfos .allInfo .adress p {
                         width: 316px;
-                        color: #B4B4B4;
+                        color: #b4b4b4;
                         text-align: right;
                         font-family: Inter;
                         font-size: 20px;
@@ -1843,7 +1868,7 @@ footer {
 
                     #ContactHead .overlay .contactInfos .allInfo .number p {
                         width: 316px;
-                        color: #B4B4B4;
+                        color: #b4b4b4;
                         text-align: right;
                         font-family: Inter;
                         font-size: 20px;
@@ -1870,7 +1895,7 @@ footer {
 
                     #ContactHead .overlay .contactInfos .allInfo .email p {
                         width: 340px;
-                        color: #B4B4B4;
+                        color: #b4b4b4;
                         text-align: right;
                         font-family: Inter;
                         font-size: 20px;
@@ -1935,8 +1960,8 @@ footer {
         font-style: normal;
         font-weight: 400;
         line-height: 150%;*/
-        /* 27px */
-    /*}
+/* 27px */
+/*}
 
     #About h1 {
         position: absolute;
@@ -1963,22 +1988,56 @@ footer {
         font-style: normal;
         font-weight: 700;
         line-height: 100%;*/
-        /* 200px */
-    /*}*/
+/* 200px */
+/*}*/
 
 #About {
-    width: 1440px;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    top: 72px;
 }
 
     #About .aboutSectionimage {
         width: 1440px;
         height: 464px;
         overflow: hidden;
+        position: relative;
     }
+
+        #About .aboutSectionimage h1 {
+            position: absolute;
+            flex-shrink: 0;
+            color: rgba(90, 154, 255, 0);
+            text-align: right;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #6ca5ff;
+            font-family: "Open Sans Hebrew Condensed";
+            font-size: 200px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 200px */
+            top: 32px;
+            right: 112px;
+            z-index: 999;
+        }
+
+        #About .aboutSectionimage h2 {
+            position: absolute;
+            flex-shrink: 0;
+            right: 112px;
+            color: #defa39;
+            text-align: right;
+            font-family: "Open Sans Hebrew Condensed";
+            font-size: 200px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 200px */
+            bottom: 31px;
+        }
 
         #About .aboutSectionimage img {
             width: 100%;
@@ -2049,7 +2108,7 @@ footer {
             #PartnersHead .overlay .partnersTitle h1 {
                 width: 1320px;
                 color: rgba(255, 255, 255, 0);
-                -webkit-text-stroke: 2px #5A9AFF;
+                -webkit-text-stroke: 2px #5a9aff;
                 font-family: "Open Sans Hebrew Condensed";
                 font-size: 200px;
                 font-style: normal;
@@ -2060,7 +2119,7 @@ footer {
 
             #PartnersHead .overlay .partnersTitle h2 {
                 width: 1320px;
-                color: #DEFA39;
+                color: #defa39;
                 text-align: right;
                 font-family: "Open Sans Hebrew Condensed";
                 font-size: 70px;
@@ -2083,7 +2142,7 @@ footer {
 
     #PartnersBody p {
         width: 1000px;
-        color: #5C5B5B;
+        color: #5c5b5b;
         font-family: Inter;
         font-size: 20px;
         font-style: normal;
@@ -2110,7 +2169,7 @@ footer {
             overflow: hidden;
             align-items: center;
             flex-shrink: 0;
-            background: #FFF;
+            background: #fff;
             box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.05);
         }
 
@@ -2142,7 +2201,7 @@ footer {
         left: 285px;
         color: rgba(255, 255, 255, 0);
         text-align: center;
-        -webkit-text-stroke: 2px #5A9AFF;
+        -webkit-text-stroke: 2px #5a9aff;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 200px;
         font-style: normal;
@@ -2161,7 +2220,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
-        color: #DEFA39;
+        color: #defa39;
         text-align: center;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 70px;
@@ -2182,7 +2241,7 @@ footer {
 
     #SolutionGroups .intro {
         width: 1000px;
-        color: #5C5B5B;
+        color: #5c5b5b;
         font-family: Inter;
         font-size: 20px;
         font-style: normal;
@@ -2221,7 +2280,7 @@ footer {
 
             #SolutionGroups .solutionCard .solutionText .subtitle {
                 overflow: hidden;
-                color: #5A5A5A;
+                color: #5a5a5a;
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
@@ -2269,7 +2328,7 @@ footer {
         }
 }*/
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #Video .card {
         display: none;
     }
@@ -2308,7 +2367,7 @@ footer {
             gap: 0 !important;
             padding: 0 !important;
             padding-left: 20px !important;
-            background-image: url("../images/Rectangle Shade Blue.png") !important;
+            background-image: url("../images/Rectangle%20Shade%20Blue.html") !important;
         }
 
             #AboutHome .left a {
@@ -2331,7 +2390,7 @@ footer {
             }
 
         #AboutHome .right {
-            background-image: url("../images/Rectangle Shade Green.png") !important;
+            background-image: url("../images/Rectangle%20Shade%20Green.html") !important;
             z-index: 2;
             top: 580px !important;
             display: flex;
@@ -2345,7 +2404,7 @@ footer {
 
     #Services {
         background-color: rgb(20, 85, 152);
-        background-image: url("../images/Service rectangle.png");
+        background-image: url("../images/Service%20rectangle.html");
         top: 190px;
         width: 100%;
     }
@@ -2374,20 +2433,20 @@ footer {
 
     #News .newsSlider .sliderLeft {
         width: 20%;
-        background-image: url("../images/Rectangle Shade Blue2.png");
+        background-image: url("../images/Rectangle%20Shade%20Blue2.html");
     }
 
         #News .newsSlider .sliderLeft h1,
         #News .newsSlider .sliderLeft p {
             width: 10% !important;
         }
-}
+} */
 
 #ServiceSection {
     width: 100%;
     height: 720px;
     flex-shrink: 0;
-    background-image: url(../images/service1bg.jpeg);
+    background-image: url(../images/service1bg.jpg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -2403,7 +2462,7 @@ footer {
         width: 1240px;
         color: rgba(255, 255, 255, 0);
         text-align: center;
-        -webkit-text-stroke: 2px #5A9AFF;
+        -webkit-text-stroke: 2px #5a9aff;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 200px;
         font-style: normal;
@@ -2415,7 +2474,7 @@ footer {
     #ServiceSection h2 {
         margin-top: -147px;
         width: 1100px;
-        color: #DEFA39;
+        color: #defa39;
         text-align: center;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 96px;
@@ -2434,7 +2493,7 @@ footer {
     #Service .all .tab-services .tab-service {
         -webkit-clip-path: polygon(11.5% 0, 100% 0%, 88.5% 100%, 0% 100%);
         clip-path: polygon(11.5% 0, 100% 0%, 88.5% 100%, 0% 100%);
-        background-color: #D9D9D9;
+        background-color: #d9d9d9;
         flex: 1;
         height: 80px;
         cursor: pointer;
@@ -2483,7 +2542,7 @@ footer {
 
     #ServiceDetail P {
         width: 1000px;
-        color: #5C5B5B;
+        color: #5c5b5b;
         font-family: Inter;
         font-size: 20px;
         font-style: normal;
@@ -2495,7 +2554,7 @@ footer {
 #NewsTop {
     width: 1440px;
     height: 440px;
-    background-image: url(../images/newsbgmain.jpeg);
+    background-image: url(../images/newsbgmain.jpg);
     margin: 0 auto;
     background-position: center;
     background-size: cover;
@@ -2521,7 +2580,7 @@ footer {
 
     #NewsTop h3 {
         transform: rotateY(180deg);
-        color: #DEFA39;
+        color: #defa39;
         font-family: "Open Sans Hebrew Condensed";
         font-size: 200px;
         font-style: normal;
@@ -2544,7 +2603,7 @@ footer {
 }
 
     #AllNews h1 {
-        color: #5A5A5A;
+        color: #5a5a5a;
         font-family: Inter;
         font-size: 32px;
         font-style: normal;
@@ -2564,8 +2623,8 @@ footer {
             padding: 32px;
             align-items: flex-start;
             gap: 32px;
-            border: 1px solid #DBDBDB;
-            background: #FFF;
+            border: 1px solid #dbdbdb;
+            background: #fff;
         }
 
             #AllNews .newsCards .newsCard .newsImage {
@@ -2589,7 +2648,7 @@ footer {
                     width: 704px;
                     height: 24px;
                     overflow: hidden;
-                    color: #5A9AFF;
+                    color: #5a9aff;
                     font-family: Inter;
                     font-size: 16px;
                     font-style: normal;
@@ -2602,7 +2661,7 @@ footer {
                     height: 24px;
                     overflow: hidden;
                     width: 704px;
-                    color: #5A5A5A;
+                    color: #5a5a5a;
                     font-family: Inter;
                     font-size: 16px;
                     font-style: normal;
@@ -2633,8 +2692,8 @@ footer {
                     align-items: center;
                     gap: 10px;
                     flex-shrink: 0;
-                    background: #001A42;
-                    color: #FFF;
+                    background: #001a42;
+                    color: #fff;
                     text-align: center;
                     font-family: Inter;
                     font-size: 15px;
@@ -2685,7 +2744,7 @@ footer {
 
         #NewsDetail .allDetail p {
             width: 1000px;
-            color: #5C5B5B;
+            color: #5c5b5b;
             font-family: Inter;
             font-size: 20px;
             font-style: normal;
@@ -2719,7 +2778,7 @@ footer {
     }
 
         .rightNav li a {
-            color: #FFF;
+            color: #fff;
             text-align: center;
             font-family: Monda;
             font-size: 24px;
@@ -2728,8 +2787,1870 @@ footer {
             line-height: 150%;
             /* 36px */
         }
+
 .activeNavLink {
     border-left: 3px solid white;
-    background-color: #02356A !important;
+    background-color: #02356a !important;
+}
+
+.mobileFooter {
+    display: none;
 }
 /*# sourceMappingURL=style.css.map */
+
+#ServiceDetail .serviceDetailHead .arrows {
+    display: none;
+}
+.mobileMenu{
+    display:none;
+}
+/* ----------------------Responsive Design for Mobile----------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+
+    body {
+        display: flex;
+        width: 100vw !important;
+        /* height: 5428px; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    header {
+        /*---------------Duzelis olunacaq---------------------*/
+        display: flex;
+        /* height: 80px; */
+        padding: 15px 20px;
+        /* justify-content: space-between;
+    align-items: center; */
+        flex-shrink: 0;
+        position: relative;
+    }
+
+        header .logo a .second,
+        header .menu,
+        .rightNav {
+            display: none;
+        }
+
+        header .mobileMenu {
+            position: absolute;
+            right: 20px;
+            display:block;
+
+        }
+
+            header .mobileMenu svg {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+            }
+
+    #Video {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+        #Video .card {
+            display: none;
+        }
+        /* #Video video {
+    transform: scale(1);
+  } */
+
+        #Video .blursvg {
+            height: 480px;
+            width: 100%;
+            fill: rgba(0, 74, 151, 0.68);
+            top: 240px;
+            background-image: url(../images/svg/homeblur.svg);
+            top: 142px;
+            background-size: 100%;
+        }
+
+        #Video video {
+            height: 100vh;
+            transform: scale(3);
+        }
+
+        #Video .blursvg .homeTexts {
+            align-items: flex-start;
+            gap: 10px;
+            align-self: stretch;
+        }
+
+        #Video .blursvg .homeTexts {
+            margin-top: 54px;
+            margin-left: 40px;
+        }
+
+            #Video .blursvg .homeTexts .homeCapital {
+                display: flex;
+                width: 310px;
+                height: 120px;
+                flex-direction: column;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+
+                #Video .blursvg .homeTexts .homeCapital h1 {
+                    color: #fff;
+                    font-family: "Open Sans Hebrew Condensed";
+                    font-size: 48px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%; /* 72px */
+                }
+
+            #Video .blursvg .homeTexts .homeLower {
+                width: 204px;
+                height: 220px;
+            }
+
+                #Video .blursvg .homeTexts .homeLower h4 {
+                    display: flex;
+                    width: 204px;
+                    height: 96px;
+                    flex-direction: column;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: #fff;
+                    font-family: "Open Sans Hebrew Condensed";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%; /* 36px */
+                }
+
+                #Video .blursvg .homeTexts .homeLower p {
+                    width: 204px;
+                    color: #fff;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 150%; /* 24px */
+                }
+
+    #AboutHome {
+        width: 100%;
+        height: 774px; /* ------------------------------10 px added */
+
+        background-size: 100% 329px;
+        background-position: top;
+    }
+
+        #AboutHome .allText .left {
+            top: 142px;
+        }
+
+        #AboutHome .allText h1 {
+            left: 30px;
+            font-size: 54px;
+            height: 96px;
+            top: 23px;
+        }
+
+        #AboutHome .allText .left {
+            /* gap: 18px;
+    width: 100%;
+    background-size: cover;*/
+            width: 100%;
+            padding: 57px 30px;
+            background-image: url(../images/svg/aboutusblue.svg);
+            background-size: 100%;
+        }
+
+            #AboutHome .allText .left h2 {
+                width: 330px;
+                height: 48px;
+                font-size: 36px;
+            }
+
+            #AboutHome .allText .left h3 {
+                width: 330px;
+                color: #fff;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 150%; /* 21px */
+            }
+
+            #AboutHome .allText .left a {
+                /* width: 120px; */
+                height: 44px;
+                padding: 10px 30px;
+            }
+
+        #AboutHome .allText .right {
+            width: 100%;
+            top: 448px;
+            z-index: 999;
+            background-image: url(../images/svg/aboutusyellow.svg);
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0;
+        }
+
+            #AboutHome .allText .right h3 {
+                width: 264px;
+            }
+
+    #Services {
+        width: 100%;
+        height: 764px;
+        background-size: cover;
+        background-position: left;
+    }
+
+    #ServiceSection {
+        background-image: url(../images/svg/serviceMobilebg.svg);
+    }
+
+    #Services h1 {
+        width: 100%;
+        left: 30px;
+        top: 50px;
+        font-size: 64px;
+    }
+
+    #Services .serviceCards {
+        width: 100%;
+        right: 0px;
+        left: 0;
+        overflow-x: hidden;
+        gap: 24px;
+    }
+
+        #Services .serviceCards .card {
+            align-items: flex-start;
+        }
+
+            #Services .serviceCards .card .cardframe .cardIcon {
+                padding: 47px 70px;
+                height: 174px;
+                width: 220px;
+            }
+
+                #Services .serviceCards .card .cardframe .cardIcon img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+            #Services .serviceCards .card .cardframe .cardTextsvsButton {
+                gap: 24px;
+                width: 220px;
+                height: 210px;
+            }
+
+                #Services .serviceCards .card .cardframe .cardTextsvsButton .cardTexts {
+                    width: 156px;
+                    height: 78px;
+                }
+
+                    #Services
+                    .serviceCards
+                    .card
+                    .cardframe
+                    .cardTextsvsButton
+                    .cardTexts
+                    .title {
+                        width: 156px;
+                        font-size: 24px;
+                    }
+
+                    #Services
+                    .serviceCards
+                    .card
+                    .cardframe
+                    .cardTextsvsButton
+                    .cardTexts
+                    .subtitle {
+                        font-size: 14px;
+                        width: 156px;
+                    }
+
+                #Services .serviceCards .card .cardframe .cardTextsvsButton .button {
+                    width: 110px;
+                }
+
+    #Complexity {
+        width: 100%;
+        height: 764px;
+        flex-shrink: 0;
+        background-image: url(../images/svg/complexity.svg);
+        background-size: cover;
+    }
+
+        #Complexity .complexityTexts {
+            gap: 50px;
+            width: 330px;
+            left: 30px;
+            top: 70px;
+        }
+
+            #Complexity .complexityTexts h1 {
+                width: 248px;
+                align-items: flex-start;
+                font-size: 48px;
+                line-height: 44px;
+            }
+
+            #Complexity .complexityTexts .textVsButton {
+                gap: 16px;
+                width: 330px;
+            }
+
+                #Complexity .complexityTexts .textVsButton h2 {
+                    width: 330px;
+                    height: 72;
+                    font-size: 24px;
+                }
+
+                #Complexity .complexityTexts .textVsButton h3 {
+                    width: 194px;
+                    font-size: 14px;
+                }
+
+                #Complexity .complexityTexts .textVsButton .button {
+                    height: 44px;
+                    padding: 10px 30px;
+                }
+
+        #Complexity .miniButtons {
+            left: 89px;
+            bottom: 24px;
+        }
+
+    #Contact {
+        width: 100%;
+        height: 764px;
+        background-image: url(../images/svg/homeContactbg.png);
+        /* -----------------------------------------------  Custom */
+    }
+
+        #Contact h1 {
+            /* width: 254px; */
+            width: auto;
+            font-size: 48px;
+            top: 60px;
+            right: 30px;
+        }
+
+        #Contact form {
+            gap: 8px;
+            flex-direction: column;
+            height: auto;
+            width: 254px;
+            top: 162px;
+            right: 30px;
+        }
+
+            #Contact form .inputWithLabel {
+                gap: 4px;
+                width: 100%;
+                height: auto;
+            }
+
+                #Contact form .inputWithLabel input {
+                    width: 254px;
+                    height: 48px;
+                    gap: 10px;
+                    color: rgba(115, 115, 115, 0.3);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; /* 171.429% */
+                    letter-spacing: 0.5px;
+                }
+
+                #Contact form .inputWithLabel label {
+                    width: 254px;
+                    font-size: 14px;
+                }
+
+            #Contact form .messageinput {
+                gap: 4px;
+                width: 254px;
+                height: 168px;
+                padding: 3px 0px 8px 0px;
+            }
+
+                #Contact form .messageinput label {
+                    font-size: 14px;
+                }
+
+                #Contact form .messageinput textarea {
+                    width: 254px !important;
+                    height: 132px !important;
+                }
+
+            #Contact form .submitbutton {
+                width: auto;
+            }
+
+    #News {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+        #News h1 {
+            width: 100%;
+            height: 254px;
+            font-size: 48px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            top: 0;
+        }
+
+        #News .newsSlider {
+            top: 254px;
+        }
+
+            #News .newsSlider .sliderLeft {
+                background-image: url(../images/svg/latestnew.svg);
+                width: 82.94vw;
+                background-size: 82.94vw;
+                height: 510px;
+            }
+
+            #News .newsSlider .sliderRight {
+                background-image: url(../images/svg/man-reading-newspaper3.png);
+                width: 100vw;
+                left: 0;
+                background-size: cover;
+                height: 510px;
+            }
+
+            #News .newsSlider .sliderLeft h1 {
+                display: flex;
+                width: 240px;
+                height: 66px;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 0;
+                top: 70px;
+                left: 30px;
+                font-size: 32px;
+                line-height: 100%;
+            }
+
+            #News .newsSlider .sliderLeft p {
+                width: 198px;
+                height: 198px;
+                left: 30px;
+                top: 154px;
+                font-size: 12px;
+            }
+
+            #News .newsSlider .newsMiniButtons {
+                top: 472px;
+            }
+
+    #Partners {
+        width: 100%;
+        padding: 68px 0px 57px 0px;
+        gap: 48px;
+        margin-top: 45px;
+    }
+
+        #Partners h1 {
+            font-size: 48px;
+        }
+
+        #Partners .splide {
+            width: 100%;
+            height: 120px;
+        }
+    /* footer {
+    border: 1px solid #ff0000;
+    position: relative;
+    height: 760px;
+  }
+  footer .footerinfo {
+    top: 20px;
+    left: 20px;
+  }
+  footer .footerinfo .logo a img:nth-child(2) {
+    display: none;
+  }
+  footer .footerinfo .footermenu {
+    position: absolute;
+    top: 120px;
+    left: 44px;
+    width: 302px;
+  }
+  footer .footerinfo .footermenu .followus {
+    position: absolute;
+    top: 143px;
+    left: calc((100vw - 84px) / 3);
+    text-align: center;
+  }
+  footer .footerinfo .footermenu .button {
+    position: absolute;
+    top: -119px;
+
+ 
+  }
+  footer .line {
+    top: 375px;
+  }
+
+  footer .copyright {
+    left: calc((100vw - 226px) / 2);
+    top: 403px;
+  } */
+
+    footer {
+        display: none;
+    }
+
+    .mobileFooter {
+        width: 100%;
+        display: flex;
+        padding: 20px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        height: auto;
+        .mobilefooterinfo
+
+{
+    .mobilelogo
+
+{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+    justify-content: space-between;
+    width: 100vw;
+    .mobilelogolinks
+
+{
+    .logo2
+
+{
+    display: none;
+}
+
+img {
+    width: 68px;
+    height: 68px;
+    margin-left: 20px;
+}
+
+}
+
+.mobilebutton {
+    display: flex;
+    height: 44px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #001a42;
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 22.5px */
+}
+
+}
+
+.mobilefootermenu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 340px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 23px 160px;
+    margin-inline: calc((100vw - 302px) / 2);
+    margin-top: 32px;
+    .mobilehomemenu
+
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    a
+
+{
+    color: #1e2833;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.205px;
+}
+
+}
+
+.mobileservicemenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    a
+
+{
+    color: #1e2833;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.205px;
+}
+
+}
+}
+
+.mobilefollowus {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    align-items: center;
+    width: 100%;
+    p
+
+{
+    color: #0052d4;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.232px;
+}
+
+.mobilesocials {
+    display: flex;
+    width: 84px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+}
+}
+
+.mobileline {
+    width: 100vw;
+    height: 2px;
+    background: rgba(30, 40, 51, 0.07);
+}
+
+.mobilecopyright {
+    width: 226px;
+    color: #1e2833;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.205px;
+    opacity: 0.5;
+}
+
+}
+
+/*----------------------------------------- Service Mobile------------------------- */
+
+#ServiceSection {
+    height: 238px;
+}
+
+    #ServiceSection h1 {
+        font-size: 64px;
+        width: 313px;
+        position: absolute;
+        top: 38px;
+    }
+
+    #ServiceSection h2 {
+        width: 272px;
+        font-size: 32px;
+        margin-top: 0;
+        position: absolute;
+        bottom: 41px;
+    }
+
+#Service .all .tab-services {
+    display: none;
+}
+/* #Service .all .tab-services .tab-service {
+    height: 60px;
+  }
+  #Service .all .tab-services .tab-service a {
+    font-size: 18px;
+  } */
+#ServiceDetail h1 {
+    font-size: 44px;
+}
+
+#ServiceDetail {
+    width: 100%;
+    padding: 20px 30px 40px 30px;
+    background: #f4f4f4;
+}
+
+    #ServiceDetail P {
+        width: 100%;
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    #ServiceDetail .serviceDetailHead {
+        display: flex;
+        width: 100%;
+    }
+
+        #ServiceDetail .serviceDetailHead .arrows {
+            display: flex;
+            align-items: center;
+        }
+
+            #ServiceDetail .serviceDetailHead .arrows img {
+                width: 40px;
+                height: 40px;
+            }
+
+/* -----------------------------Contact us */
+
+#ContactHead {
+    width: 100vw;
+    height: 928px;
+}
+
+    #ContactHead .overlay {
+        position: relative;
+    }
+
+        #ContactHead .overlay .titleText h1 {
+            font-size: 64px;
+            width: 330px;
+            position: absolute;
+            left: -68px;
+            top: 11px;
+        }
+
+        #ContactHead .overlay .titleText h2 {
+            font-size: 36px;
+            width: 134px;
+            top: 47px;
+            left: 86px;
+        }
+
+        #ContactHead .overlay form {
+            width: 254px;
+            height: 480px;
+            top: 195px;
+            left: 30px;
+        }
+
+        #ContactHead .overlay form {
+            gap: 8px;
+        }
+
+            #ContactHead .overlay form .inputWithLabel {
+                gap: 4px;
+                height: 78px;
+            }
+
+                #ContactHead .overlay form .inputWithLabel input {
+                    width: 254px;
+                    height: 48px;
+                    padding-right: 16px;
+                    gap: 10px;
+                    color: #a3a3a3;
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; /* 200% */
+                    letter-spacing: 0.5px;
+                }
+
+            #ContactHead .overlay form .messageinput textarea {
+                width: 254px !important;
+            }
+
+            #ContactHead .overlay form .submitbutton {
+                margin-top: 10px;
+                width: auto;
+                padding: 10px 20px;
+            }
+
+        #ContactHead .overlay .contactInfos {
+            position: relative;
+            height: 188px;
+            top: 560px;
+        }
+
+            #ContactHead .overlay .contactInfos .socialMedia {
+                right: 187px;
+                top: 28px;
+                right: 158px;
+            }
+
+            #ContactHead .overlay .contactInfos .allInfo {
+                width: 315px;
+                height: 88px;
+                right: 158px;
+            }
+
+#Map {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*------------------------------- ABOUT US ------------------*/
+#About {
+    width: 100vw;
+    top: 0;
+}
+
+    #About .aboutSectionimage {
+        height: 238px;
+        width: 100%;
+        position: relative;
+    }
+
+        #About .aboutSectionimage h1 {
+            color: rgba(90, 154, 255, 0);
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #6ca5ff;
+            font-family: "Open Sans Hebrew Condensed";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            z-index: 99;
+            position: absolute;
+            top: 55px;
+            right: 30px;
+            text-align: right;
+        }
+
+        #About .aboutSectionimage h2 {
+            color: #defa39;
+            text-align: right;
+            font-family: "Open Sans Hebrew Condensed";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            position: absolute;
+            right: 30px;
+            bottom: 55px;
+        }
+
+    #About .aboutSectionText {
+        width: 100vw;
+        padding: 30px;
+        text-align: justify;
+        height: auto;
+    }
+
+        #About .aboutSectionText p {
+            width: 100%;
+        }
+
+/*---------------------- SOLUTIONS---------------------------- */
+#Intro {
+    width: 100vw;
+    height: 238px;
+    position: relative;
+    backdrop-filter: blur(2px);
+}
+
+    #Intro h1 {
+        font-size: 64px;
+        top: 72px;
+        left: 0;
+        width: 100%;
+    }
+
+    #Intro h2 {
+        font-size: 32px;
+        left: 0;
+        top: 92px;
+        bottom: 71px;
+        width: 296px;
+        width: 296px;
+        left: calc((100vw - 296px) / 2);
+    }
+
+#SolutionGroups {
+    width: 100vw;
+    padding: 30px 0;
+    gap: 40px;
+}
+
+    #SolutionGroups .intro {
+        width: 100vw;
+        height: auto;
+        padding-inline: 30px;
+        font-size: 14px;
+    }
+
+    #SolutionGroups .solutionCard {
+        background-image: url(../images/svg/solutionsRectangle1.svg) !important;
+        background-repeat: no-repeat;
+        background-position: top right !important;
+        width: 100%;
+        position: relative;
+        padding-bottom: 0;
+        height: 200px;
+    }
+
+    #SolutionGroups .solutionSecondCard {
+        background-image: url(../images/svg/solutionsRectangle2.svg) !important;
+        background-repeat: no-repeat;
+        background-position: left !important;
+        width: 100%;
+        position: relative;
+    }
+
+.nonReversed {
+    display: none;
+}
+
+#SolutionGroups .solutionCard .solutionText {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 90%;
+}
+
+    #SolutionGroups .solutionCard .solutionText .subtitle {
+        font-size: 14px;
+        width: calc(100% - 128px);
+        height: auto;
+    }
+
+#SolutionGroups .solutionSecondCard .solutionText .secondSubtitle {
+    position: absolute;
+    right: 20px;
+}
+
+#SolutionGroups .solutionSecondCard .solutionText .secondSubtitle {
+    width: calc(100% - 98px);
+    top: 49px;
+}
+
+#SolutionGroups .solutionCard .solutionText .title {
+    font-size: 16px;
+}
+
+#SolutionGroups .solutionCard .solutionText .secondTitle {
+    padding-left: 80px;
+}
+/*------------------------ PARTNERS --------------------*/
+#PartnersHead {
+    width: 100vw;
+    height: 238px;
+}
+
+    #PartnersHead .overlay .partnersTitle {
+        width: 100%;
+        padding: 0;
+        top: 49px;
+        left: 30px;
+    }
+
+        #PartnersHead .overlay .partnersTitle h1 {
+            font-size: 54px; /* --------------------------- custom */
+
+            width: 100vw;
+            text-align: center;
+        }
+
+    #PartnersHead .overlay .partnersTitle {
+        left: 0;
+    }
+
+        #PartnersHead .overlay .partnersTitle h2 {
+            width: 100vw;
+            font-size: 32px;
+            text-align: center;
+            left: calc((100vw - 296px) / 2);
+        }
+
+#PartnersBody {
+    width: 100vw;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+    #PartnersBody p {
+        width: 100%;
+    }
+
+    #PartnersBody .allPartners {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 14px; /* --------------------------- custom */
+    }
+
+        #PartnersBody .allPartners .partnersCard {
+            width: 100px;
+            height: 100px;
+        }
+
+/* ----------------------------Mobile Menu BAR--------- */
+}
+
+.menuBar {
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; */
+    background: #282b30;
+    color: #fff;
+    overflow-x: hidden;
+    .header
+
+{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background: #282b30;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1); */
+
+    .logo
+
+{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    a
+
+{
+    img
+
+{
+    width: 68px;
+    height: 68px;
+}
+
+.logo2 {
+    display: none;
+}
+
+}
+}
+
+.closeMenu {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    svg
+
+{
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+}
+}
+
+.menuOverlay {
+    display: flex;
+    /* height: 934px; */
+    /* padding: 120px 60px 178px 533px; */
+    height: calc(100vh - 110px);
+    padding-right: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 60px;
+    flex-shrink: 0;
+    .language
+
+{
+    display: flex;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* border: 1px solid #000; */
+
+    .lang
+
+{
+    a
+
+{
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px; /* ----------------------Custom */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: white !important;
+}
+
+.langoptions {
+    display: none;
+    position: absolute;
+    top: 52px;
+    width: 70%;
+    background: #fff;
+    z-index: 100;
+    padding: 20px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    border-top: 4px solid #0093ff;
+    transition: 0.4s all ease-in-out;
+}
+
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px; /* ----------------------Custom */
+
+    .menuItem
+
+{
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif; /* ----------------------Custom */
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    a
+
+{
+    color: #fff;
+}
+
+}
+
+.socialMedia {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* ----------------------Custom */
+
+    a
+
+{
+    color: white;
+    svg
+
+{
+    width: 32px; /* ----------------------Custom */
+    height: 32px; /* ----------------------Custom */
+    color: white;
+    fill: white;
+}
+
+}
+}
+}
+
+.contactUs {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #0093ff;
+    color: #fff;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+}
+}
+
+.showMobileMenu {
+    top: 0;
+    left: 0;
+    z-index: 999999;
+}
+
+/* -----------------------Responsive Design for Tablet ------------------------*/
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    header {
+        width: 100vw;
+        padding: 15px 40px;
+    }
+
+        header .logo a .second {
+            display: block;
+        }
+
+        header .mobileMenu {
+            right: 40px;
+        }
+
+            header .mobileMenu svg {
+                width: 60px;
+                height: 60px;
+            }
+
+    #Video {
+        height: 90vh;
+    }
+
+        #Video video {
+            height: 100%;
+        }
+
+        #Video .blursvg {
+            top: 52px;
+            background-size: calc(100% - 20px);
+        }
+
+        #Video .card {
+            display: block;
+            right: 20px;
+            top: 370px;
+            width: 350px;
+            height: 492px;
+        }
+
+            #Video .card .cardPhoto {
+                width: 350px;
+                height: 214px;
+            }
+
+            #Video .card .cardDetails {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        #Video .blursvg .homeTexts .homeCapital {
+            width: auto;
+            height: 94px;
+            overflow: visible;
+        }
+
+            #Video .blursvg .homeTexts .homeCapital h1 {
+                font-size: 96px;
+                width: 534px;
+                line-height: 100%;
+                margin-top: 130px;
+            }
+
+        #Video .blursvg .homeTexts {
+            margin-top: 0;
+        }
+
+            #Video .blursvg .homeTexts .homeLower h4 {
+                width: 299px;
+                height: 96px;
+                font-size: 32px;
+                justify-content: flex-start;
+                margin-top: 20px;
+            }
+
+            #Video .blursvg .homeTexts .homeLower p {
+                width: 299px;
+                text-align: justify;
+            }
+
+            #Video .blursvg .homeTexts .homeLower {
+                width: 299px;
+                height: 196px;
+                font-size: 32px;
+                margin-top: 110px;
+            }
+
+    #AboutHome .allText h1 {
+        left: 60px;
+        top: 64px;
+        font-size: 96px;
+    }
+
+    #AboutHome {
+        background-size: 646px 545px;
+        height: 915px;
+        background-position: 181% -149px;
+    }
+
+        #AboutHome .allText .left {
+            top: 294px;
+        }
+
+        #AboutHome .allText .right {
+            top: 589px;
+        }
+
+        #AboutHome .allText .left h3 {
+            font-size: 16px;
+        }
+
+        #AboutHome .allText .right h3 {
+            position: absolute;
+            right: 40px;
+            width: 516px;
+        }
+
+    #Services {
+        height: 926px;
+    }
+
+        #Services h1 {
+            width: calc(100% - 80px);
+            top: 40px;
+            left: 40px;
+            font-size: 70px;
+            height: 104px;
+        }
+
+        #Services .serviceCards {
+            left: 152px;
+            top: 294px;
+            width: 100vw;
+        }
+
+            #Services .serviceCards .card {
+                height: 388px;
+            }
+
+    #Complexity .complexityTexts {
+        gap: 70px;
+        left: 40px;
+        width: 588px;
+        top: 140px;
+    }
+
+        #Complexity .complexityTexts h1 {
+            width: 588px;
+            font-size: 64px;
+            line-height: 150%;
+        }
+
+        #Complexity .complexityTexts .textVsButton {
+            width: 428px;
+        }
+
+            #Complexity .complexityTexts .textVsButton h2 {
+                font-size: 36px;
+                width: 100%;
+                height: auto;
+            }
+
+            #Complexity .complexityTexts .textVsButton h3 {
+                font-size: 16px;
+                width: 455px;
+                height: auto;
+            }
+
+    #Complexity .miniButtons {
+        left: 40px;
+        bottom: 80px;
+    }
+
+    #Contact {
+        height: 926px;
+    }
+
+        #Contact h1 {
+            font-size: 70px;
+            text-transform: uppercase;
+            right: 40px;
+            top: 70px;
+        }
+
+        #Contact form {
+            width: 312px;
+            gap: 16px;
+            align-items: flex-end;
+            right: 40px;
+            margin-top: 10px;
+        }
+
+            #Contact form .inputWithLabel input {
+                width: 100%;
+                display: flex;
+                width: 312px;
+                font-size: 14px;
+                gap: 12px;
+            }
+
+            #Contact form .inputWithLabel label {
+                font-size: 16px;
+            }
+
+            #Contact form .messageinput textarea {
+                width: 312px !important;
+                position: absolute;
+                left: 0;
+            }
+
+    #News {
+        height: 881px;
+    }
+
+        #News h1 {
+            height: 348px;
+            font-size: 96px;
+        }
+
+        #News .newsSlider .sliderLeft {
+            width: 659px;
+            height: 578px;
+        }
+
+        #News .newsSlider .sliderRight {
+            height: 578px;
+        }
+
+        #News .newsSlider {
+            height: auto;
+            height: 578px;
+            top: 348px;
+        }
+
+            #News .newsSlider .sliderLeft h1 {
+                width: 421px;
+                height: 107px;
+                left: 40px;
+                top: 60px;
+                justify-content: flex-start;
+                font-size: 36px;
+            }
+
+            #News .newsSlider .sliderLeft p {
+                width: 463px;
+                left: 40px;
+                top: 175px;
+                font-size: 16px;
+            }
+
+    .mobileFooter {
+        & .mobilefooterinfo
+
+{
+    .mobilelogo
+
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 608px;
+    overflow-x: hidden;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+}
+}
+
+.mobileFooter {
+    & .mobilefooterinfo
+
+{
+    .mobilefootermenu
+
+{
+    flex-wrap: nowrap;
+    width: 608px;
+    margin-top: 56px;
+}
+
+}
+}
+
+.mobileFooter {
+    & .mobilefooterinfo
+
+{
+    .mobilefootermenu div
+
+{
+    flex: 1;
+}
+
+}
+}
+
+.mobileFooter {
+    height: 448px;
+    gap: 44px;
+    & .mobilefooterinfo
+
+{
+    & .mobilelogo
+
+{
+    margin-top: 30px;
+    & .mobilelogolinks
+
+{
+    display: flex;
+    img: first-child
+
+{
+    margin-left: 0;
+}
+
+.logo2 {
+    display: block;
+    width: 138px;
+    height: 68px;
+    object-fit: cover;
+    margin-left: -8px;
+}
+
+}
+}
+}
+}
+
+/* ------------------------------SERVICES */
+#ServiceSection {
+    height: 475px;
+}
+
+    #ServiceSection h1 {
+        font-size: 128px;
+        width: 626px;
+        top: 80px;
+    }
+
+    #ServiceSection h2 {
+        font-size: 64px;
+        width: 541px;
+        position: absolute;
+        bottom: 80px;
+    }
+
+#Service {
+}
+
+    #Service .all .tab-services {
+        display: flex;
+        align-items: flex-start;
+        gap: -32px;
+    }
+
+        #Service .all .tab-services .tab-service {
+            display: flex;
+            width: 240px; /*------------------------custom */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+#ServiceDetail {
+    padding: 60px;
+}
+
+    #ServiceDetail .serviceDetailHead .arrows {
+        display: none;
+    }
+
+    #ServiceDetail h1 {
+        font-size: 64px;
+        width: 100%;
+    }
+
+    #ServiceDetail P {
+        font-size: 20px;
+    }
+
+/*----------------------------------- CONTACT US */
+
+#ContactHead {
+    background-position-x: 122px;
+    height: 926px;
+}
+
+    #ContactHead .overlay .contactInfos {
+        width: 415px;
+        height: 188px;
+        top: 516px;
+        left: calc(100vw - 415px);
+    }
+
+        #ContactHead .overlay .contactInfos .allInfo {
+            width: 317px;
+            right: 28px;
+            bottom: 30px;
+        }
+
+        #ContactHead .overlay .contactInfos .socialMedia {
+            right: 28px;
+        }
+
+    #ContactHead .overlay .titleText h1 {
+        left: -64px;
+        top: 4px;
+        font-size: 128px;
+    }
+
+    #ContactHead .overlay .titleText h2 {
+        font-size: 80px;
+        left: 104px;
+    }
+
+    #ContactHead .overlay form {
+        position: absolute;
+        top: 314px;
+        left: 40px;
+        gap: 16px;
+        width: 312px !important;
+    }
+
+        #ContactHead .overlay form .inputWithLabel {
+            width: 100%;
+        }
+
+            #ContactHead .overlay form .inputWithLabel input {
+                width: 100%;
+                height: 60px;
+                font-size: 14px;
+            }
+
+        #ContactHead .overlay form .messageinput textarea {
+            width: 312px !important;
+            height: 132px !important;
+        }
+
+#Map {
+    height: 463px;
+}
+
+/* -------------------ABOUT US */
+
+#About .aboutSectionimage {
+    height: 476px;
+    width: 100%;
+}
+
+.aboutSectionimage h1 {
+    font-size: 140px;
+    top: 98px;
+    right: 40px;
+}
+
+.aboutSectionimage h2 {
+    font-size: 140px;
+    bottom: 98px;
+    right: 40px;
+}
+
+#About .aboutSectionText {
+    padding: 60px;
+}
+
+/*---------- PARTNERS --------------------*/
+#PartnersHead {
+    height: 440px;
+    background-image: url(../images/svg/partnersbg.svg);
+}
+
+    #PartnersHead .overlay {
+        background: rgba(5, 16, 35, 0.59);
+        backdrop-filter: blur(2.700000047683716px);
+    }
+
+        #PartnersHead .overlay .partnersTitle {
+            width: 100%;
+            padding-inline: 60px;
+            left: 0;
+            top: 126px;
+        }
+
+            #PartnersHead .overlay .partnersTitle h1 {
+                width: calc(100vw - 120px);
+                text-align: center;
+                font-size: 108px; /* Figmada 128px idi */
+            }
+
+            #PartnersHead .overlay .partnersTitle h2 {
+                width: calc(100vw - 120px);
+                width: 648px;
+                font-size: 38px; /* Figmada 48px idi */
+            }
+
+#PartnersBody {
+    padding: 90px 60px;
+}
+
+    #PartnersBody p {
+        height: auto;
+    }
+
+    #PartnersBody .allPartners {
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+        #PartnersBody .allPartners .partnersCard {
+            width: calc((100vw - 168px) / 3);
+            height: calc((100vw - 168px) / 3);
+        }
+
+/* -----------------Tablet Menu */
+
+.mobileMenu {
+    .menuBar
+
+{
+    .header
+
+{
+    padding: 15px 40px;
+    .logo
+
+{
+    a
+
+{
+    .logo2
+
+{
+    width: 138px;
+    height: 68px;
+    object-fit: cover;
+}
+
+}
+}
+
+.closeMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg
+
+{
+    width: 60px;
+    height: 60px;
+}
+
+}
+}
+
+.menuOverlay {
+    padding-right: 60px;
+    padding-top: 120px;
+    justify-content: flex-start;
+    .language
+
+{
+    .langoptions
+
+{
+    width: 79%;
+    a
+
+{
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+}
+
+svg {
+    width: 30px;
+    height: 30px;
+}
+
+.lang {
+    a
+
+{
+    font-size: 32px;
+}
+
+}
+}
+
+.menuList {
+    gap: 30px;
+    .menuItem
+
+{
+    font-size: 32px;
+    .socialMedia
+
+{
+    a: nth-child(1) svg
+
+{
+    width: 16px;
+    height: 31.997px;
+}
+
+a:nth-child(2) svg {
+    width: 39.385px;
+    height: 32px;
+}
+
+a:nth-child(3) svg {
+    width: 32px;
+    height: 32px;
+}
+
+}
+}
+}
+}
+}
+}
+}

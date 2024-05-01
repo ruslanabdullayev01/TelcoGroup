@@ -25,7 +25,7 @@
                 {
                     <a style="cursor:pointer;">@language.Getkey("Services")</a>
                 }
-                
+
                 <a asp-controller="Solutions" asp-action="Index">@language.Getkey("Solutions")</a>
                 <a asp-controller="Partners" asp-action="Index">@language.Getkey("Partners")</a>
             </div>
@@ -44,4 +44,50 @@
     <div class="line"></div>
 
     <p class="copyright">@language.Getkey("Copyright")</p>
+</footer>
+
+<footer class="mobileFooter">
+    <div class="mobilefooterinfo">
+        <div class="mobilelogo">
+            <a asp-action="Index" asp-controller="Home" class="mobilelogolinks">
+                <img src="~/src/images/logo.png" alt="">
+                <img src="~/src/images/logo2.png" alt="" class="logo2">
+            </a>
+            <a class="mobilebutton" asp-action="Index" asp-controller="ContactUs">@language.Getkey("ContactUs")</a>
+        </div>
+        <div class="mobilefootermenu">
+            <div class="mobilehomemenu">
+                <a asp-action="Index" asp-controller="Home">@language.Getkey("Home")</a>
+                <a asp-action="Index" asp-controller="AboutUs">@language.Getkey("AboutUs")</a>
+                <a asp-action="Index" asp-controller="ContactUs">@language.Getkey("ContactUs")</a>
+            </div>
+            <div class="mobileservicemenu">
+                @if(firstService is not null)
+                {
+                    <a asp-action="Index" asp-controller="Services" asp-route-id="@firstService.Id">@language.Getkey("Services")</a>
+
+                }
+                else
+                {
+                    <a style="cursor:pointer;">@language.Getkey("Services")</a>
+                }
+                <a asp-action="Index" asp-controller="Solutions">@language.Getkey("Solutions")</a>
+                <a asp-action="Index" asp-controller="Partners">@language.Getkey("Partners")</a>
+            </div>
+            <div class="mobilefollowus">
+                <p>@language.Getkey("FollowUs")</p>
+                <div class="mobilesocials">
+                    <a href="@Model.Bio?.Facebook"><img src="~/src/images/fb.svg" alt=""></a>
+                    <a href="@Model.Bio?.Twitter"><img src="~/src/images/twitter.svg" alt=""></a>
+                    <a href="@Model.Bio?.Instagram"><img src="~/src/images/insta.svg" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="mobileline"></div>
+
+    <p class="mobilecopyright">@language.Getkey("Copyright")</p>
 </footer>

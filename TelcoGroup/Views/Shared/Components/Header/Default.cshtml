@@ -2,6 +2,7 @@
 @{
     string currentCulture = await layoutService.GetCurrentLangauge();
     Service? firstService = ViewBag.FirstService;
+    Bio? bio = ViewBag.Bios;
 }
 
 
@@ -21,10 +22,11 @@
             {
                 <a asp-controller="Services" asp-action="Index" asp-route-id="@firstService.Id">@language.Getkey("Services")</a>
             }
-            else{
+            else
+            {
                 <a style="cursor:pointer;">@language.Getkey("Services")</a>
             }
-            
+
         </div>
         <div class="text">
             <a asp-controller="Solutions" asp-action="Index">@language.Getkey("Solutions")</a>
@@ -59,4 +61,115 @@
             }
         </div>
     </div>
+    <!------------------ Mobile Menu Start ---------------------->
+
+    <div class="mobileMenu">
+        <svg class="mobileMenuBtn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M5 30V26.6667H35V30H5ZM5 21.6667V18.3333H35V21.6667H5ZM5 13.3333V10H35V13.3333H5Z" fill="black" />
+        </svg>
+        <div class="menuBar">
+            <div class="header">
+                <div class="logo">
+                    <a class="" href="index.html">
+                        <img src="~/src/images/logo.png" alt="logo">
+                        <img src="~/src/images/logo2.png" class="logo2" alt="logo">
+                    </a>
+                </div>
+                <div class="closeMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M30.6018 32.9665L20.0018 22.3499L9.40182 32.9665L7.03516 30.5999L17.6518 19.9999L7.03516 9.39987L9.40182 7.0332L20.0018 17.6499L30.6018 7.04987L32.9518 9.39987L22.3518 19.9999L32.9518 30.5999L30.6018 32.9665Z" fill="white" />
+                    </svg>
+                </div>
+            </div>
+            <div class="menuOverlay">
+                <div class="language">
+                    @if (currentCulture == "en-US")
+                    {
+                        <div class="lang" style="cursor: pointer; pointer-events: none">
+                            <a class="selectedLang"
+                               href="javascript:void(0);"
+                               style="cursor: pointer; pointer-events: none">EN</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.5658 6L8.67451 11L3.7832 6" stroke="white" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="langoptions">
+                            <a class="lang" href="index.html?culture=en-US">AZ</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="lang" style="cursor: pointer; pointer-events: none">
+                            <a class="selectedLang"
+                               href="javascript:void(0);"
+                               style="cursor: pointer; pointer-events: none">AZ</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M13.5658 6L8.67451 11L3.7832 6" stroke="white" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="langoptions">
+                            <a class="lang" href="index.html?culture=en-US">EN</a>
+                        </div>
+                    }
+                </div>
+
+                <ul class="menuList">
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="Home">@language.Getkey("Home")</a>
+                    </li>
+                    <li class="menuItem">
+                        @if (firstService is not null)
+                        {
+                            <a asp-action="Index" asp-controller="Services" asp-route-id="@firstService.Id" style="cursor:pointer;">@language.Getkey("Services")</a>
+                        }
+                        else
+                        {
+                            <a style="cursor:pointer;">@language.Getkey("Services")</a>
+                        }
+                    </li>
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="Solutions" style="cursor:pointer;">@language.Getkey("Solutions")</a>
+                    </li>
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="Partners">@language.Getkey("Partners")</a>
+                    </li>
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="AboutUs">@language.Getkey("AboutUs")</a>
+                    </li>
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="ContactUs">@language.Getkey("ContactUs")</a>
+                    </li>
+                    <li class="menuItem">
+                        <div class="socialMedia">
+                            <a href="@bio?.Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="32" viewBox="0 0 17 32" fill="none">
+                                    <path d="M13.6961 5.31289H16.6172V0.225315C16.1132 0.155987 14.38 0 12.3615 0C8.14989 0 5.2648 2.64911 5.2648 7.51804V11.999H0.617188V17.6865H5.2648V31.9973H10.963V17.6879H15.4226L16.1306 12.0003H10.9617V8.08199C10.963 6.43813 11.4056 5.31289 13.6961 5.31289Z" fill="white" />
+                                </svg>
+                            </a>
+                            <a href="@bio?.Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" fill="none">
+                                    <path d="M40.0018 3.78831C38.5372 4.43077 36.9766 4.85662 35.3495 5.06338C37.0233 4.064 38.3009 2.49354 38.9015 0.600615C37.3409 1.53108 35.6178 2.18831 33.7815 2.55508C32.2996 0.977231 30.1876 0 27.8836 0C23.4135 0 19.8147 3.62831 19.8147 8.07631C19.8147 8.71631 19.8689 9.33169 20.0018 9.91754C13.2892 9.59015 7.34949 6.37292 3.35934 1.472C2.66273 2.68062 2.25411 4.064 2.25411 5.55323C2.25411 8.34954 3.69411 10.8283 5.84057 12.2634C4.54334 12.2388 3.27073 11.8622 2.19257 11.2689C2.19257 11.2935 2.19257 11.3255 2.19257 11.3575C2.19257 15.2812 4.99134 18.5403 8.66149 19.2911C8.00426 19.4708 7.28796 19.5569 6.54457 19.5569C6.02765 19.5569 5.5058 19.5274 5.01596 19.4191C6.06211 22.6166 9.03072 24.9674 12.5606 25.0437C9.81349 27.1926 6.32549 28.4874 2.5495 28.4874C1.88734 28.4874 1.25226 28.4578 0.617188 28.3766C4.1938 30.6831 8.43257 32 13.0036 32C27.8615 32 35.9846 19.6923 35.9846 9.024C35.9846 8.66708 35.9723 8.32246 35.955 7.98031C37.5575 6.84308 38.904 5.42277 40.0018 3.78831Z" fill="white" />
+                                </svg>
+                            </a>
+                            <a href="@bio?.Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0H22C27.522 0 32 4.478 32 10V22C32 27.522 27.522 32 22 32H10C4.478 32 0 27.522 0 22V10C0 4.478 4.478 0 10 0ZM22 29C25.86 29 29 25.86 29 22V10C29 6.14 25.86 3 22 3H10C6.14 3 3 6.14 3 10V22C3 25.86 6.14 29 10 29H22Z" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C8 11.582 11.582 8 16 8C20.418 8 24 11.582 24 16C24 20.418 20.418 24 16 24C11.582 24 8 20.418 8 16ZM11 16C11 18.756 13.244 21 16 21C18.756 21 21 18.756 21 16C21 13.242 18.756 11 16 11C13.244 11 11 13.242 11 16Z" fill="white" />
+                                    <circle cx="24.6012" cy="7.40194" r="1.066" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------ Mobile Menu End ---------------------->
 </header>
+
