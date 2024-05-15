@@ -1169,6 +1169,8 @@ footer {
                 flex-shrink: 0;
                 padding: 12px 16px;
                 resize: none;
+                font-family: Inter;
+                font-size: 14px;
             }
 
         #Contact form .submitbutton {
@@ -1226,6 +1228,8 @@ footer {
         justify-content: space-between;
         top: 348px;
         left: 0;
+        background-image: url(../images/svg/latestDesktop1.svg);
+        background-size: 100%;
     }
 
         #News .newsSlider .sliderLeft {
@@ -1236,7 +1240,7 @@ footer {
             z-index: 1;
             height: 100%;
             width: 100%;
-            background-image: url(../images/newsLeft.svg);
+            /* background-image: url(../images/newsLeft.svg); */
             background-repeat: no-repeat;
             background-position: left;
             background-size: contain;
@@ -1287,7 +1291,7 @@ footer {
             width: 558px;
             height: 100%;
             flex-shrink: 0;
-            background-image: url(../images/newsRight.svg);
+            /* background-image: url(../images/newsRight.svg); */
             background-repeat: no-repeat;
             background-position: right;
             background-size: contain;
@@ -2138,6 +2142,7 @@ footer {
     gap: 80px;
     margin: auto;
     width: 1440px;
+    background-color: #f4f4f4;
 }
 
     #PartnersBody p {
@@ -2801,13 +2806,13 @@ footer {
 #ServiceDetail .serviceDetailHead .arrows {
     display: none;
 }
-.mobileMenu{
-    display:none;
+
+.mobileMenu {
+    display: none;
 }
+
 /* ----------------------Responsive Design for Mobile----------------------------------------- */
-
 @media only screen and (max-width: 992px) {
-
     body {
         display: flex;
         width: 100vw !important;
@@ -2837,8 +2842,7 @@ footer {
         header .mobileMenu {
             position: absolute;
             right: 20px;
-            display:block;
-
+            display: block;
         }
 
             header .mobileMenu svg {
@@ -3028,7 +3032,7 @@ footer {
         width: 100%;
         right: 0px;
         left: 0;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         gap: 24px;
     }
 
@@ -3220,10 +3224,12 @@ footer {
 
         #News .newsSlider {
             top: 254px;
+            background-image: none !important;
         }
 
             #News .newsSlider .sliderLeft {
-                background-image: url(../images/svg/latestnew.svg);
+                /* background-image: url(../images/svg/latestnew1.svg); */
+                background-image: url(../images/svg/latestnew1.svg);
                 width: 82.94vw;
                 background-size: 82.94vw;
                 height: 510px;
@@ -3335,7 +3341,7 @@ footer {
 
 {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 20px;
     justify-content: space-between;
     width: 100vw;
@@ -3558,8 +3564,8 @@ img {
         #ContactHead .overlay .titleText h2 {
             font-size: 36px;
             width: 134px;
-            top: 47px;
-            left: 86px;
+            top: 39px;
+            left: 91px;
         }
 
         #ContactHead .overlay form {
@@ -4255,6 +4261,7 @@ svg {
             height: auto;
             height: 578px;
             top: 348px;
+            background-image: none !important;
         }
 
             #News .newsSlider .sliderLeft h1 {
@@ -4281,7 +4288,7 @@ svg {
 
 {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 608px;
     overflow-x: hidden;
@@ -4435,11 +4442,17 @@ svg {
         left: -64px;
         top: 4px;
         font-size: 128px;
+        /* elave olundu */
+        width: 727px;
     }
 
     #ContactHead .overlay .titleText h2 {
         font-size: 80px;
         left: 104px;
+        /* elave olundu */
+        width: 348px;
+        left: 246px;
+        top: 52px;
     }
 
     #ContactHead .overlay form {
