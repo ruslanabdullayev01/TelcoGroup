@@ -15,6 +15,7 @@
                 <a asp-controller="Home" asp-action="Index">@language.Getkey("Home")</a>
                 <a asp-controller="AboutUs" asp-action="Index">@language.Getkey("AboutUs")</a>
                 <a asp-controller="ContactUs" asp-action="Index">@language.Getkey("ContactUs")</a>
+                <a asp-controller="News" asp-action="Index">@language.Getkey("News")</a>
             </div>
             <div class="servicemenu">
                 @if (firstService != null)
@@ -60,6 +61,7 @@
                 <a asp-action="Index" asp-controller="Home">@language.Getkey("Home")</a>
                 <a asp-action="Index" asp-controller="AboutUs">@language.Getkey("AboutUs")</a>
                 <a asp-action="Index" asp-controller="ContactUs">@language.Getkey("ContactUs")</a>
+                <a asp-action="Index" asp-controller="News">@language.Getkey("News")</a>
             </div>
             <div class="mobileservicemenu">
                 @if(firstService is not null)

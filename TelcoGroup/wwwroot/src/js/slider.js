@@ -19,10 +19,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 .querySelector(`.sliderLeft[data-target="${index}"]`)
                 .classList.add("activesliderleft");
 
-            // console.log("newsLeft=", newsLeft[index]);
-            if (window.innerWidth < 700) {
-                console.log("HEYYYY");
-            }
             newsDesktop.style.backgroundImage = `url('src/images/svg/latestDesktop${Number(index) + 1
                 }.svg')`;
             newsLeft[index].style.backgroundImage = `url('src/images/svg/latestnew${Number(index) + 1

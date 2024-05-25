@@ -40,6 +40,9 @@
         <div class="text">
             <a asp-controller="ContactUs" asp-action="Index">@language.Getkey("ContactUs")</a>
         </div>
+        <div class="text">
+            <a asp-controller="News" asp-action="Index">@language.Getkey("News")</a>
+        </div>
         <div class="language">
             @if (currentCulture == "en-US")
             {
@@ -140,6 +143,9 @@
                     </li>
                     <li class="menuItem">
                         <a asp-action="Index" asp-controller="ContactUs">@language.Getkey("ContactUs")</a>
+                    </li>
+                    <li class="menuItem">
+                        <a asp-action="Index" asp-controller="News">@language.Getkey("News")</a>
                     </li>
                     <li class="menuItem">
                         <div class="socialMedia">

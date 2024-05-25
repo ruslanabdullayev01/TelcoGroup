@@ -1,3 +1,6 @@
+/* --------------17.05.ADDED font url ---------------*/
+@import url("https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -111,7 +114,7 @@ header {
     header .menu {
         display: flex;
         align-items: flex-start;
-        gap: 50px;
+        gap: 36px;
     }
 
         header .menu .text {
@@ -209,15 +212,24 @@ footer {
         gap: 424px;
     }
 
-        footer .footerinfo .logo {
+        /* 17.05 added a tag */
+        footer .footerinfo .logo a {
             display: flex;
             align-items: flex-start;
         }
 
-            footer .footerinfo .logo img {
-                width: 68px;
-                height: 68px;
-            }
+        /* 17.05 added first-child and nth-child */
+        footer .footerinfo .logo img:first-child {
+            width: 68px;
+            height: 68px;
+            object-fit: cover;
+        }
+        /* 17.05 added first-child and nth-child */
+        footer .footerinfo .logo img:nth-child(2) {
+            width: 138px;
+            height: 68px;
+            object-fit: cover;
+        }
 
         footer .footerinfo .footermenu {
             display: flex;
@@ -645,14 +657,13 @@ footer {
 
             #AboutHome .allText .left h3 {
                 overflow: hidden;
-                width: 670px;
+                width: 610px;
                 color: #fff;
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 300;
                 line-height: 150%;
-                /* 30px */
             }
 
             #AboutHome .allText .left a {
@@ -683,6 +694,7 @@ footer {
             background-repeat: no-repeat;
             background-position: right;
             padding: 133px 100px 133px 304px;
+            z-index: 1;
         }
 
             #AboutHome .allText .right h3 {
@@ -786,9 +798,11 @@ footer {
                 #Services .serviceCards .card:hover .cardframe .cardTextsvsButton .button {
                     background-color: #defa39;
                     color: black;
-                    width: 150px;
+                    /* --------17.05 Added width */
+                    width: 120px;
                     height: 48px;
-                    transform: translateY(30px);
+                    /* --------17.05 deleted transform */
+                    /* transform: translateY(30px); */
                 }
 
             #Services .serviceCards .card .cardframe {
@@ -877,14 +891,16 @@ footer {
 
                     #Services .serviceCards .card .cardframe .cardTextsvsButton .button {
                         display: flex;
-                        width: 140px;
+                        /* 17.05 Added width:110px */
+                        width: 110px;
                         height: 44px;
                         padding: 10px 30px;
                         justify-content: center;
                         align-items: center;
                         gap: 10px;
                         flex-shrink: 0;
-                        background: #000;
+                        /* 17.05 Added background color */
+                        background: #323b45;
                         color: #fff;
                         text-align: center;
                         font-family: Inter;
@@ -894,6 +910,10 @@ footer {
                         line-height: 150%;
                         /* 22.5px */
                     }
+                        /* 17.05 Added bg-color */
+                        #Services .serviceCards .card .cardframe .cardTextsvsButton .button:hover {
+                            background-color: #48a2ffa8;
+                        }
 
 #Complexity {
     margin: auto;
@@ -990,6 +1010,10 @@ footer {
                 background: #defa39;
             }
 
+                #Complexity .complexityTexts .textVsButton .button:hover {
+                    background-color: #48a2ffa8;
+                }
+
     #Complexity .miniButtons {
         display: flex;
         width: 212px;
@@ -1038,6 +1062,8 @@ footer {
         position: absolute;
         top: 88px;
         right: 60px;
+        /* 17.05 Added uppercase */
+        text-transform: uppercase;
     }
 
     #Contact form {
@@ -1175,7 +1201,8 @@ footer {
 
         #Contact form .submitbutton {
             display: flex;
-            width: 120px;
+            /* 17.05 deleted width */
+            /* width: 120px; */
             height: 44px;
             padding: 10px 30px;
             justify-content: center;
@@ -1194,6 +1221,10 @@ footer {
             cursor: pointer;
             /* 22.5px */
         }
+            /* 17.05 added hover */
+            #Contact form .submitbutton:hover {
+                background-color: #48a2ffa8;
+            }
 
 #News {
     margin: auto;
@@ -1571,6 +1602,7 @@ footer {
             align-items: flex-start;
             gap: -1333px;
             flex-shrink: 0;
+            text-transform: uppercase;
         }
 
             #ContactHead .overlay .titleText h1 {
@@ -1586,13 +1618,14 @@ footer {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 100%;
+                border: 1px solid black;
                 /* 180px */
             }
 
             #ContactHead .overlay .titleText h2 {
                 position: absolute;
                 top: 160px;
-                left: 450px;
+                left: 548px;
                 width: 792px;
                 flex-shrink: 0;
                 color: #defa39;
@@ -1601,7 +1634,7 @@ footer {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 100%;
-                /* 100px */
+                /* border: 1px solid red; */
             }
 
         #ContactHead .overlay form {
@@ -2080,6 +2113,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 98px;
 }
 
     #PartnersHead .overlay {
@@ -2198,12 +2232,13 @@ footer {
     flex-shrink: 0;
     margin: auto;
     position: relative;
+    margin-top: 98px;
 }
 
     #Intro h1 {
         position: absolute;
         top: 95px;
-        left: 285px;
+        left: calc((100vw - 869px) / 2);
         color: rgba(255, 255, 255, 0);
         text-align: center;
         -webkit-text-stroke: 2px #5a9aff;
@@ -2212,13 +2247,13 @@ footer {
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
-        /* 200px */
+        width: 869px;
     }
 
     #Intro h2 {
         position: absolute;
         top: 221px;
-        left: 399px;
+        left: calc((100vw - 643px) / 2);
         display: flex;
         width: 643px;
         height: 123px;
@@ -2451,7 +2486,8 @@ footer {
     width: 100%;
     height: 720px;
     flex-shrink: 0;
-    background-image: url(../images/service1bg.jpg);
+    /* background-image: url(../images/service1bg.jpg); */
+    background-image: url(../images/svg/service-bg-test.svg);
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -2461,6 +2497,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+    background-color: #2c2b2b;
 }
 
     #ServiceSection h1 {
@@ -2977,13 +3014,14 @@ footer {
             }
 
             #AboutHome .allText .left h3 {
-                width: 330px;
+                overflow: hidden;
+                width: 610px;
                 color: #fff;
                 font-family: Inter;
-                font-size: 14px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 300;
-                line-height: 150%; /* 21px */
+                line-height: 150%;
             }
 
             #AboutHome .allText .left a {
@@ -3231,7 +3269,7 @@ footer {
                 /* background-image: url(../images/svg/latestnew1.svg); */
                 background-image: url(../images/svg/latestnew1.svg);
                 width: 82.94vw;
-                background-size: 82.94vw;
+                background-size: 82.94vw 510px;
                 height: 510px;
             }
 
@@ -3272,7 +3310,7 @@ footer {
         width: 100%;
         padding: 68px 0px 57px 0px;
         gap: 48px;
-        margin-top: 45px;
+        margin-top: 44px;
     }
 
         #Partners h1 {
@@ -4136,9 +4174,9 @@ svg {
             top: 589px;
         }
 
-        #AboutHome .allText .left h3 {
+        /*#AboutHome .allText .left h3 {
             font-size: 16px;
-        }
+        }*/
 
         #AboutHome .allText .right h3 {
             position: absolute;

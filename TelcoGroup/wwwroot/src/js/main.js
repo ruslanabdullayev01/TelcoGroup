@@ -85,6 +85,21 @@
 //    }
 //});
 
+//-------------------------Start-Added new window event
+let aboutUsImage = document.querySelector("#About .aboutSectionimage img");
+window.addEventListener(
+    "resize",
+    function () {
+        if (window.innerWidth <= 600) {
+            aboutUsImage.src = "src/images/svg/aboutUsMobileMain.png";
+        } else {
+            aboutUsImage.src = "src/images/svg/about-us-test.png";
+        }
+    },
+    true
+);
+//-------------------------End------------------------
+
 document.addEventListener("DOMContentLoaded", function () {
     var navlinks = document.querySelectorAll(".navlink");
 
