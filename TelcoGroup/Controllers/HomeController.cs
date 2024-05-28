@@ -47,7 +47,7 @@ namespace TelcoGroup.Controllers
                 .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
                 .Take(4)
                 .ToListAsync(),
-                MainSolution = await _db.Solutions
+                MainNews = await _db.News
                 .Where(x=>!x.IsDeleted && x.IsMain && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
                 .FirstOrDefaultAsync()
             };

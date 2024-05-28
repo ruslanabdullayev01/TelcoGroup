@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using TelcoGroup.DAL;
 using TelcoGroup.Helpers;
 using TelcoGroup.Models;
@@ -29,6 +30,8 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         public IActionResult Index(int pageIndex = 1)
         {
             IQueryable<Partner> query = _db.Partners.Where(x => !x.IsDeleted);
+            ViewBag.Setting = _db.Settings.Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key == "PartnersPageDescription").AsNoTracking();
+            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Partners" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Partner>.Create(query, pageIndex, 10, 10));
         }
         #endregion

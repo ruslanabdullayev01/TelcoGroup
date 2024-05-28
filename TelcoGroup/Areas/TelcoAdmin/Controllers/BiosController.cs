@@ -27,6 +27,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         {
             IQueryable<Bio> query = _db.Bios.Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             ViewBag.DataCount = query.Count();
+            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Bio>.Create(query, pageIndex, 5, 5));
         }
         #endregion

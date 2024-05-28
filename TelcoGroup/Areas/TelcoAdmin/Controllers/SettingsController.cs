@@ -24,7 +24,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Setting> query = _db.Settings.Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name)
+            IQueryable<Setting> query = _db.Settings.Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key!= "PartnersPageDescription" && x.Key!= "SolutionsPageDescription")
                 .OrderByDescending(c => c.Id);
 
             return View(PageNatedList<Setting>.Create(query, pageIndex, 10, 10));
@@ -88,12 +88,11 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
                 Setting? dbSetting = dbSettings.FirstOrDefault(s => s.LanguageId == setting.LanguageId);
 
                 if (dbSetting == null) return NotFound();
-                //dbSetting.Key = settings[0].Key;
                 dbSetting.Value = setting.Value;
             }
 
             await _db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Appeals");
         }
         #endregion
 

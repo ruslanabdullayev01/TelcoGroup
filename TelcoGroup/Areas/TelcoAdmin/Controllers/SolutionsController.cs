@@ -27,44 +27,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         public IActionResult Index(int pageIndex = 1)
         {
             IQueryable<Solution> query = _db.Solutions.Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Setting = _db.Settings.Where(x => x.Language.Culture == CultureInfo.CurrentCulture.Name && x.Key == "SolutionsPageDescription").AsNoTracking();
+            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Solution>.Create(query, pageIndex, 10, 10));
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> SetMainSolution(int[] MainSolutionId)
-        {
-            if (ModelState.IsValid)
-            {
-                foreach (var id in MainSolutionId)
-                {
-                    var solution = _db.Solutions.FirstOrDefault(s => s.Id == id);
-                    if (solution != null)
-                    {
-                        var solutions = _db.Solutions.Where(x => x.LanguageGroup == solution.LanguageGroup);
-                        var solutionsForFalse = _db.Solutions.Where(x => x.LanguageGroup != solution.LanguageGroup);
-                        if (solutions != null)
-                        {
-                            foreach (var item in solutions)
-                            {
-                                item.IsMain = true;
-                            }
-                        }
-                        if (solutionsForFalse != null)
-                        {
-                            foreach (var item in solutionsForFalse)
-                            {
-                                item.IsMain = false;
-                            }
-                        }
-                    }
-                }
-
-                await _db.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View();
         }
         #endregion
 

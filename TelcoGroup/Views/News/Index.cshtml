@@ -1,7 +1,12 @@
 ﻿@using System.Globalization
 @model IEnumerable<News>
+@{
+    Header header = ViewBag.Header;
+}
 <section id="NewsTop">
-    @Html.Raw(language.Getkey("LatestNewsMod"))
+    @* @Html.Raw(language.Getkey("LatestNewsMod")) *@
+    <h1>@Html.Raw(header.BlueText)</h1>
+    <h2>@Html.Raw(header.GreenText)</h2>
 </section>
 
 
@@ -17,7 +22,7 @@
                 <div class="newsInfo">
                     <h1 class="title">@item.Title</h1>
                     <h3 class="date"> @item.CreatedAt.ToString("MMMM dd, yyyy").Substring(0, 1).ToUpper()@item.CreatedAt.ToString("MMMM dd, yyyy").Substring(1)</h3>
-                    <p class="description">@Html.Raw(item.Description)</p>
+                    <div class="description">@Html.Raw(item.Description)</div>
                     <a asp-controller="News" asp-action="Detail" asp-route-id="@item.Id">@language.Getkey("ReadMore")</a>
                 </div>
             </div>

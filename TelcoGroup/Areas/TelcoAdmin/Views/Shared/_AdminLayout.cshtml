@@ -40,12 +40,12 @@
             </div>
             <ul class="sidebar-menu do-nicescrol">
                 <li class="sidebar-header">@language.Getkey("MAINNAVIGATION")</li>
-
-                @* <li>
-                    <a asp-controller="Dashboard" asp-action="Index">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>@language.Getkey("Dashboard")</span>
+                
+                <li>
+                    <a asp-controller="Settings" asp-action="Index">
+                        <i class="zmdi zmdi-view-dashboard"></i> <span>@language.Getkey("Home")</span>
                     </a>
-                </li> *@
+                </li>
 
                 <li>
                     <a asp-controller="AboutUs" asp-action="Index">
@@ -95,11 +95,7 @@
                     </a>
                 </li>
 
-                <li>
-                    <a asp-controller="Settings" asp-action="Index">
-                        <i class="zmdi zmdi-view-dashboard"></i> <span>@language.Getkey("Settings")</span>
-                    </a>
-                </li>
+              
 
                 @if (User.IsInRole("SuperAdmin"))
                 {

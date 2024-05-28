@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using TelcoGroup.DAL;
 using TelcoGroup.Models;
 
@@ -15,6 +16,7 @@ namespace TelcoGroup.Controllers
         public async Task<IActionResult> Index()
         {
             List<Partner> partners = await _db.Partners.Where(x => !x.IsDeleted).ToListAsync();
+            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Partners" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(partners);
         }
     }

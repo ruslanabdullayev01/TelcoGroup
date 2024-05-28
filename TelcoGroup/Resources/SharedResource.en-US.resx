@@ -157,6 +157,9 @@
   <data name="BioDetails" xml:space="preserve">
     <value>Bio Details</value>
   </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>Blue Text</value>
+  </data>
   <data name="BottomDescription" xml:space="preserve">
     <value>Bottom description</value>
   </data>
@@ -263,8 +266,14 @@
   <data name="GoToBack" xml:space="preserve">
     <value>Go To Back</value>
   </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>Green Text</value>
+  </data>
   <data name="HeaderDescription" xml:space="preserve">
     <value>Header Description</value>
+  </data>
+  <data name="Headers" xml:space="preserve">
+    <value>Headers</value>
   </data>
   <data name="HeaderTitle" xml:space="preserve">
     <value>Header Title</value>
@@ -274,6 +283,9 @@
   </data>
   <data name="HomeDescription" xml:space="preserve">
     <value>Home Description</value>
+  </data>
+  <data name="HomePageHeaderDescription" xml:space="preserve">
+    <value>Home Page Headers Description</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Home Title</value>
@@ -347,6 +359,9 @@
   </data>
   <data name="PartnerSliders" xml:space="preserve">
     <value>Partner sliders</value>
+  </data>
+  <data name="PartnersPageDescription" xml:space="preserve">
+    <value>Partners Page Description</value>
   </data>
   <data name="PARTNERSS" xml:space="preserve">
     <value>PARTNERS</value>
@@ -422,6 +437,9 @@
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Solutions</value>
+  </data>
+  <data name="SolutionsPageDescription" xml:space="preserve">
+    <value>Solutions Page Description</value>
   </data>
   <data name="SOLUTIONSS" xml:space="preserve">
     <value>SOLUTIONS</value>

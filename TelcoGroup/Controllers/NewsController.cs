@@ -19,6 +19,7 @@ namespace TelcoGroup.Controllers
             IEnumerable<News> news = await _db.News
                 .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
                 .OrderByDescending(x => x.CreatedAt).AsNoTracking().ToListAsync();
+            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "News" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(news);
         }
 

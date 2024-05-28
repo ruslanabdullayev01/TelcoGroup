@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
-                    <h2 class="card-title">@language.Getkey("Settings")</h2>
+                    <h2 class="card-title">@language.Getkey("HomePageHeaderDescription")</h2>
                     @* <a asp-area="TelcoAdmin" asp-controller="Settings" asp-action="Create" class="btn btn-primary text-white mr-2">@language.Getkey("Create")</a>  *@
 
                 </div>
@@ -43,7 +43,7 @@
                                         @set.Key
                                     </td>
                                     <th style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                        @set.Value
+                                        @Html.Raw(set.Value)
                                     </th>
                                     <td style="vertical-align: middle; text-align: center; ">
                                         <a asp-action="Detail" asp-route-id="@set.Id" class="btn btn-warning text-white mr-2">@language.Getkey("Details")</a>

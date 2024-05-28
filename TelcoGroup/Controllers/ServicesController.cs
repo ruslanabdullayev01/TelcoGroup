@@ -35,7 +35,7 @@ namespace TelcoGroup.Controllers
                 Service = service
             };
             if (service == null) return View(temp);
-
+            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Services" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(serviceVM);
         }
     }

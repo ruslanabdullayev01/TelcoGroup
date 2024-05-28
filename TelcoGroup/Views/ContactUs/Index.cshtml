@@ -1,21 +1,26 @@
 ﻿@model ContactUsVM
+@{
+    Header header = ViewBag.Header;
+}
 <section id="ContactHead">
     <div class="overlay">
         <div class="titleText">
-            @Html.Raw(language.Getkey("ContactUsMod"))
+            @* @Html.Raw(language.Getkey("ContactUsMod")) *@
+            <h1>@Html.Raw(header.BlueText)</h1>
+            <h2>@Html.Raw(header.GreenText)</h2>
         </div>
         <form asp-controller="Home" asp-action="Index" method="post">
             <div class="inputWithLabel">
                 <label for="fullname" aria-required="">@language.Getkey("FullName")<span>*</span></label>
-                <input id="fullname" placeholder="John Doe" type="text" asp-for="@Model.Appeal.FullName">
+                <input id="fullname" placeholder="i.e., John Doe" type="text" asp-for="@Model.Appeal.FullName">
             </div>
             <div class="inputWithLabel">
                 <label for="email" aria-required="">@language.Getkey("Email")<span></span></label>
-                <input id="email" placeholder="i.e.,  example@example.com " type="text" asp-for="@Model.Appeal.Email">
+                <input id="email" placeholder="i.e., example@example.com " type="text" asp-for="@Model.Appeal.Email">
             </div>
             <div class="inputWithLabel">
                 <label for="phonenumber" aria-required="">@language.Getkey("PhoneNumber")<span>*</span></label>
-                <input id="phonenumber" placeholder="+994 11 123 45 67" type="text" asp-for="@Model.Appeal.Phone">
+                <input id="phonenumber" placeholder="i.e., +994 11 123 45 67" type="text" asp-for="@Model.Appeal.Phone">
             </div>
             <div class="inputWithLabel">
                 <label for="subject" aria-required="">@language.Getkey("Subject")<span></span></label>
@@ -24,7 +29,7 @@
 
             <div class="messageinput">
                 <label for="message">@language.Getkey("YourMessage")<span>*</span></label>
-                <textarea asp-for="@Model.Appeal.Message" style="min-height: 132px"
+                <textarea asp-for="@Model.Appeal.Message" style="min-height: 132px;"
                           placeholder="i.e., I would like to..."
                           id="message"
                           cols="30"

@@ -17,6 +17,7 @@ namespace TelcoGroup.DAL
         public DbSet<Service> Services { get; set; }
         public DbSet<Solution> Solutions { get; set; }
         public DbSet<AboutUs> AboutUs { get; set; }
+        public DbSet<Header> Headers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

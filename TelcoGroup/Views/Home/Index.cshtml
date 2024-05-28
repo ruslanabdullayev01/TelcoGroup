@@ -9,28 +9,28 @@
     <div class="blursvg">
         <div class="homeTexts">
             <div class="homeCapital">
-                <h1>@settings.FirstOrDefault(s => s.Key == "HeaderTop" && s.Language!.Culture == currentCulture)?.Value</h1>
+                <h1>@Html.Raw(settings.FirstOrDefault(s => s.Key == "HeaderTop" && s.Language!.Culture == currentCulture)?.Value)</h1>
             </div>
             <div class="homeLower">
-                <h4>@settings.FirstOrDefault(s => s.Key == "HeaderMiddle" && s.Language!.Culture == currentCulture)?.Value</h4>
+                <h4>@Html.Raw(settings.FirstOrDefault(s => s.Key == "HeaderMiddle" && s.Language!.Culture == currentCulture)?.Value)</h4>
                 <p>
-                    @settings.FirstOrDefault(s => s.Key == "HeaderBottom" && s.Language!.Culture == currentCulture)?.Value
+                    @Html.Raw(settings.FirstOrDefault(s => s.Key == "HeaderBottom" && s.Language!.Culture == currentCulture)?.Value)
                 </p>
             </div>
         </div>
     </div>
     <div class="card">
         <div class="cardPhoto">
-            <img src="~/src/images/Screenshot 2024-01-31 at 23.46 1.png" alt="">
+            <img src="~/src/images/news/@Model.MainNews?.ImagePath" alt="">
         </div>
         <div class="cardDetails">
             <div class="cardTextDetails">
-                <h1>@Model.MainSolution?.Title</h1>
-                <h2>@Model.MainSolution?.SubTitle</h2>
-                <p>@Model.MainSolution?.Description</p>
+                <h1>@Html.Raw(Model.MainNews?.Title)</h1>
+                <h2>@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(0, 1).ToUpper()@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(1)</h2>
+                <p>@Html.Raw(Model.MainNews?.Description)</p>
             </div>
             <div class="textUnderline">
-                <a asp-controller="Solutions" asp-action="Index">@language.Getkey("ReadMore")</a>
+                <a asp-controller="News" asp-action="Detail" asp-route-id="@Model.MainNews?.Id">@language.Getkey("ReadMore")</a>
             </div>
             @*  <div class="miniButtons">
             <div class="minibutton activeButton"></div>
@@ -45,12 +45,12 @@
     <div class="allText">
         <h1>@language.Getkey("AboutUs")</h1>
         <div class="left">
-            <h2>@Model.AboutUs?.TopDescription</h2>
-            <h3>@Model.AboutUs?.MiddleDescription</h3>
+            <h2>@Html.Raw(Model.AboutUs?.TopDescription)</h2>
+            <h3>@Html.Raw(Model.AboutUs?.MiddleDescription)</h3>
             <a asp-controller="AboutUs" asp-action="Index">@language.Getkey("ReadMore")</a>
         </div>
         <div class="right">
-            <h3>@Model.AboutUs?.BottomDescription</h3>
+            <h3>@Html.Raw(Model.AboutUs?.BottomDescription)</h3>
         </div>
     </div>
 
@@ -71,7 +71,7 @@
                         <div class="cardTextsvsButton">
                             <div class="cardTexts">
                                 <h2 class="title">@item.Name</h2>
-                                <p class="subtitle">@item.Description</p>
+                                @* <div class="subtitle">@Html.Raw(item.Description)</div> *@
                             </div>
                             <a class="button" asp-controller="Services" asp-action="Index" asp-route-id="@item.Id">@language.Getkey("View")</a>
                         </div>
@@ -95,7 +95,7 @@
                     <div class="solutionSlider @(countSolving == 0 ? "activeSolution" : "")" data-target="@countSolving">
                         <h2>@solution.Title</h2>
                         <h3>
-                            @solution.Description
+                            @Html.Raw(solution.Description)
                         </h3>
                     </div>
                     countSolving++;
@@ -130,15 +130,15 @@
     <form asp-controller="Home" asp-action="Index" method="post">
         <div class="inputWithLabel">
             <label for="fullname" aria-required="">@language.Getkey("FullName")<span>*</span></label>
-            <input id="fullname" placeholder="John Doe" type="text" asp-for="@Model.Appeal.FullName">
+            <input id="fullname" placeholder="i.e., John Doe" type="text" asp-for="@Model.Appeal.FullName">
         </div>
         <div class="inputWithLabel">
             <label for="email" aria-required="">@language.Getkey("Email")<span></span></label>
-            <input id="email" placeholder="i.e.,  example@example.com " type="text" asp-for="@Model.Appeal.Email">
+            <input id="email" placeholder="i.e., example@example.com " type="text" asp-for="@Model.Appeal.Email">
         </div>
         <div class="inputWithLabel">
             <label for="phonenumber" aria-required="">@language.Getkey("PhoneNumber")<span>*</span></label>
-            <input id="phonenumber" placeholder="+994 11 123 45 67" type="text" asp-for="@Model.Appeal.Phone">
+            <input id="phonenumber" placeholder="i.e., +994 11 123 45 67" type="text" asp-for="@Model.Appeal.Phone">
         </div>
         <div class="inputWithLabel">
             <label for="subject" aria-required="">@language.Getkey("Subject")<span></span></label>

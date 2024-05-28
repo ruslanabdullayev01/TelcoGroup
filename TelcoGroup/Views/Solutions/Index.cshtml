@@ -4,18 +4,20 @@
     @inject LayoutService layoutService
     string currentCulture = await layoutService.GetCurrentLangauge();
     IEnumerable<Setting>? settings = await layoutService.GetSettings();
-
+    Header header = ViewBag.Header;
 
 
 }
 <section id="Intro">
-    <h1>@language.Getkey("SOLUTIONSS")</h1>
-    <h2>@language.Getkey("SolvingComplexityDeliveringSimplicity")</h2>
+   @*  <h1>@language.Getkey("SOLUTIONSS")</h1>
+    <h2>@language.Getkey("SolvingComplexityDeliveringSimplicity")</h2> *@
+    <h1>@Html.Raw(header.BlueText)</h1>
+    <h2>@Html.Raw(header.GreenText)</h2>
 </section>
 
 <section id="SolutionGroups">
     <p class="intro">
-        @settings.FirstOrDefault(s => s.Key == "SolutionsPageDescription" && s.Language?.Culture == currentCulture)?.Value
+        @Html.Raw(settings.FirstOrDefault(s => s.Key == "SolutionsPageDescription" && s.Language?.Culture == currentCulture)?.Value)
     </p>
 
     @if (Model.Count > 0)
@@ -28,7 +30,7 @@
                     <div class="solutionText">
                         <h1 class="title secondTitle">@item.Title</h1>
                         <p class="subtitle secondSubtitle">
-                            @item.Description
+                            @Html.Raw(item.Description)
                         </p>
                     </div>
                     <div class="rectangle nonReversed"></div>
@@ -40,7 +42,7 @@
                     <div class="solutionText">
                         <h1 class="title">@item.Title</h1>
                         <p class="subtitle">
-                            @item.Description
+                            @Html.Raw(item.Description)
                         </p>
                     </div>
                     <div class="rectangle"></div>

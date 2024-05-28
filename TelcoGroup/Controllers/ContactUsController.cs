@@ -21,6 +21,7 @@ namespace TelcoGroup.Controllers
             {
                 Bio = await _db.Bios.FirstOrDefaultAsync(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name),
             };
+            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(contactVM);
         }
     }

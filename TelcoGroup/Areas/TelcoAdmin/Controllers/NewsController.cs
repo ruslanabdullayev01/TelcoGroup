@@ -30,7 +30,45 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         public IActionResult Index(int pageIndex = 1)
         {
             IQueryable<News> query = _db.News.Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "News" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<News>.Create(query, pageIndex, 10, 10));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SetMainNews(int[] MainNewsId)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var id in MainNewsId)
+                {
+                    var news = _db.News.FirstOrDefault(s => s.Id == id);
+                    if (news != null)
+                    {
+                        var newss = _db.News.Where(x => x.LanguageGroup == news.LanguageGroup);
+                        var newssForFalse = _db.News.Where(x => x.LanguageGroup != news.LanguageGroup);
+                        if (newss != null)
+                        {
+                            foreach (var item in newss)
+                            {
+                                item.IsMain = true;
+                            }
+                        }
+                        if (newssForFalse != null)
+                        {
+                            foreach (var item in newssForFalse)
+                            {
+                                item.IsMain = false;
+                            }
+                        }
+                    }
+                }
+
+                await _db.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View();
         }
         #endregion
 

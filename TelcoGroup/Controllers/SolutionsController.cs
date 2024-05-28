@@ -20,6 +20,7 @@ namespace TelcoGroup.Controllers
                 .OrderByDescending(x => x.CreatedAt)
                 .Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name)
                 .ToListAsync();
+            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(solutions);
         }
     }

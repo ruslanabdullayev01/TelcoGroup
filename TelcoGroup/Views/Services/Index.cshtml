@@ -1,7 +1,10 @@
 ﻿@model ServiceVM
+@{
+    Header header = ViewBag.Header;
+}
 <section id="ServiceSection">
-    <h1>LOREM IPSUMMMM</h1>
-    <h2>LOREM IPSUM LOREM LOREMMMMM</h2>
+    <h1>@Html.Raw(header.BlueText)</h1>
+    <h2>@Html.Raw(header.GreenText)</h2>
 </section>
 
 <section id="Service">
@@ -32,6 +35,6 @@
 <section id="ServiceDetail">
     <h1>@Model.Service?.Name</h1>
     <p>
-        @Model.Service?.Description
+        @Html.Raw(Model.Service?.Description)
     </p>
 </section>

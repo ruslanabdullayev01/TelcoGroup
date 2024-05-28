@@ -1,4 +1,7 @@
 ﻿@model AboutUs
+@{
+    Header header = ViewBag.Header;
+}
 @* <section id="About">
 
     <p>@Html.Raw(Model?.GeneralDescription)</p>
@@ -8,7 +11,9 @@
 
 <section id="About">
     <div class="aboutSectionimage">
-        @Html.Raw(language.Getkey("AboutUsMod"))
+        <h1>@Html.Raw(header.BlueText)</h1>
+        <h2>@Html.Raw(header.GreenText)</h2>
+        @* @Html.Raw(language.Getkey("AboutUsMod")) *@
         <img src="~/src/images/svg/about-us-test.png" alt="">
     </div>
 

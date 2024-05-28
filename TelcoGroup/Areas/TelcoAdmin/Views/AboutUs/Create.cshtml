@@ -33,19 +33,19 @@
                             <span style="color:rgba(255,255,255,.85);">@languages[i].Name</span>
                             <div class="form-group">
                                 <label asp-for="@Model[i].TopDescription">@language.Getkey("TopDescription")</label>
-                                <textarea asp-for="@Model[i].TopDescription" class="form-control"></textarea>
+                                <textarea asp-for="@Model[i].TopDescription" class="form-control editor"></textarea>
                                 <span asp-validation-for="@Model[i].TopDescription" class="text-danger"></span>
                             </div>
                             <span style="color:rgba(255,255,255,.85);">@languages[i].Name</span>
                             <div class="form-group">
                                 <label asp-for="@Model[i].MiddleDescription">@language.Getkey("MiddleDescription")</label>
-                                <textarea asp-for="@Model[i].MiddleDescription" class="form-control"></textarea>
+                                <textarea asp-for="@Model[i].MiddleDescription" class="form-control editor"></textarea>
                                 <span asp-validation-for="@Model[i].MiddleDescription" class="text-danger"></span>
                             </div>
                             <span style="color:rgba(255,255,255,.85);">@languages[i].Name</span>
                             <div class="form-group">
                                 <label asp-for="@Model[i].BottomDescription">@language.Getkey("BottomDescription")</label>
-                                <textarea asp-for="@Model[i].BottomDescription" class="form-control"></textarea>
+                                <textarea asp-for="@Model[i].BottomDescription" class="form-control editor"></textarea>
                                 <span asp-validation-for="@Model[i].BottomDescription" class="text-danger"></span>
                             </div>
                             <input type="hidden" asp-for="@Model[i].LanguageId" value="@languages[i].Id">

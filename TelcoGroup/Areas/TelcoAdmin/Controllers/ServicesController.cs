@@ -32,6 +32,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             IQueryable<Service> query = _db.Services
                 .Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             ViewBag.DataCount = query.Count();
+            ViewBag.Headers = _db.Headers.Where(x=>x.PageKey=="Services" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Service>.Create(query, pageIndex, 10, 10));
         }
         #endregion

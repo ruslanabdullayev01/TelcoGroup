@@ -124,8 +124,7 @@
     <value>Haqqımızda</value>
   </data>
   <data name="AboutUsMod" xml:space="preserve">
-    <value>&lt;h1&gt;HAQQI-&lt;/h1&gt;
-&lt;h2&gt;MIZDA&lt;/h2&gt;</value>
+    <value>&lt;h1&gt;HAQQIMIZDA&lt;/h1&gt;</value>
   </data>
   <data name="Actions" xml:space="preserve">
     <value>Tədbirlər</value>
@@ -156,6 +155,9 @@
   </data>
   <data name="BioDetails" xml:space="preserve">
     <value>Bio təfərrüatları</value>
+  </data>
+  <data name="BlueText" xml:space="preserve">
+    <value>Göy mətn</value>
   </data>
   <data name="BottomDescription" xml:space="preserve">
     <value>Aşağıdaki təsvir</value>
@@ -263,8 +265,14 @@
   <data name="GoToBack" xml:space="preserve">
     <value>Geriyə qayıt</value>
   </data>
+  <data name="GreenText" xml:space="preserve">
+    <value>Yaşıl mətn</value>
+  </data>
   <data name="HeaderDescription" xml:space="preserve">
     <value>Header təsviri</value>
+  </data>
+  <data name="Headers" xml:space="preserve">
+    <value>Başlıqlar</value>
   </data>
   <data name="HeaderTitle" xml:space="preserve">
     <value>Header başlığı</value>
@@ -274,6 +282,9 @@
   </data>
   <data name="HomeDescription" xml:space="preserve">
     <value>Ana səhifəsində təsvir</value>
+  </data>
+  <data name="HomePageHeaderDescription" xml:space="preserve">
+    <value>Ana səhifədəki başlığların təfərrüatları</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>Ana səhifədəki başlıq</value>
@@ -347,6 +358,9 @@
   </data>
   <data name="PartnerSliders" xml:space="preserve">
     <value>Tərəfdaşların slayderi</value>
+  </data>
+  <data name="PartnersPageDescription" xml:space="preserve">
+    <value>Tərəfdaşlar səhifəsinin təfərrüatları</value>
   </data>
   <data name="PARTNERSS" xml:space="preserve">
     <value>TƏRƏFDAŞLAR</value>
@@ -422,6 +436,9 @@
   </data>
   <data name="Solutions" xml:space="preserve">
     <value>Həllər</value>
+  </data>
+  <data name="SolutionsPageDescription" xml:space="preserve">
+    <value>Həllər səhifəsinin təfərrüatları</value>
   </data>
   <data name="SOLUTIONSS" xml:space="preserve">
     <value>HƏLLƏR</value>
