@@ -3,7 +3,7 @@
     public class Solution:BaseEntity
     {
         public string Title { get; set; }
-        public string? SubTitle { get; set; } = string.Empty;
+        //public string? SubTitle { get; set; } = string.Empty;
         public string Description { get; set; }
         //public bool IsMain { get; set; }
         public int? LanguageId { get; set; }

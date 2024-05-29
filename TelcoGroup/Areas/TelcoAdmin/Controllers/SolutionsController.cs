@@ -56,7 +56,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             string? currentUsername = _userManager.GetUserName(HttpContext.User);
             foreach (Solution item in models)
             {
-                if (item.SubTitle == null) item.SubTitle = "";
+                //if (item.SubTitle == null) item.SubTitle = "";
                 item.LanguageGroup = temp != null ? temp.LanguageGroup + 1 : 1;
                 item.CreatedAt = DateTime.UtcNow.AddHours(4);
                 item.CreatedBy = currentUsername;
@@ -111,7 +111,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             {
                 Solution dbSolution = dbSolutions.FirstOrDefault(s => s.LanguageId == item.LanguageId);
                 dbSolution.Title = item.Title.Trim();
-                dbSolution.SubTitle = item.SubTitle != null ? item.SubTitle.Trim() : "";
+                //dbSolution.SubTitle = item.SubTitle != null ? item.SubTitle.Trim() : "";
                 dbSolution.Description = item.Description.Trim();
                 dbSolution.UpdatedAt = DateTime.UtcNow.AddHours(4);
                 dbSolution.UpdatedBy = currentUsername;
