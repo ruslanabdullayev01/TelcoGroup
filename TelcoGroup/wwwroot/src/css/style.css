@@ -1779,7 +1779,8 @@ footer {
 
                 #ContactHead .overlay form .messageinput textarea {
                     display: flex;
-                    min-width: 648px;
+                    /*min-width: 648px;*/
+                    width: 648px;
                     max-height: 132px;
                     flex-direction: column;
                     align-items: flex-start;
@@ -1820,7 +1821,7 @@ footer {
 
             #ContactHead .overlay form .submitbutton {
                 display: flex;
-                 width: 160px; 
+                width: 160px;
                 height: 44px;
                 padding: 10px 30px;
                 justify-content: center;
@@ -1900,7 +1901,8 @@ footer {
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 300;
-                        line-height: 150%;
+                        line-height: 100%;
+                        margin-top: 26px;
                         /* 30px */
                     }
 
@@ -2320,7 +2322,7 @@ footer {
         }
 
             #SolutionGroups .solutionCard .solutionText .title {
-                overflow:hidden;
+                overflow: hidden;
                 display: flex;
                 width: 370px;
                 height: 34px;
@@ -2871,14 +2873,19 @@ footer {
     body {
         display: flex;
         width: 100vw !important;
+        /* height: 5428px; */
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
     }
 
     header {
+        /*---------------Duzelis olunacaq---------------------*/
         display: flex;
+        /* height: 80px; */
         padding: 15px 20px;
+        /* justify-content: space-between;
+    align-items: center; */
         flex-shrink: 0;
         position: relative;
     }
@@ -3027,13 +3034,14 @@ footer {
             }
 
             #AboutHome .allText .left h3 {
-                width: 330px;
+                overflow: hidden;
+                width: 100%;
                 color: #fff;
                 font-family: Inter;
-                font-size: 14px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 300;
-                line-height: 150%; /* 21px */
+                line-height: 150%;
             }
 
             #AboutHome .allText .left a {
@@ -3569,6 +3577,7 @@ img {
     width: 100%;
     padding: 20px 30px 40px 30px;
     background: #f4f4f4;
+    background-color: #f4f4f4;
 }
 
     #ServiceDetail P {
@@ -3680,6 +3689,7 @@ img {
     height: 300px;
     width: 100%;
     overflow: hidden;
+    border: 1px solid gray;
 }
 
 /*------------------------------- ABOUT US ------------------*/
@@ -3740,6 +3750,7 @@ img {
     height: 238px;
     position: relative;
     backdrop-filter: blur(2px);
+    margin-top: 0px;
 }
 
     #Intro h1 {
@@ -3828,6 +3839,7 @@ img {
 #PartnersHead {
     width: 100vw;
     height: 238px;
+    margin-top: 0px;
 }
 
     #PartnersHead .overlay .partnersTitle {
@@ -4078,8 +4090,46 @@ svg {
 }
 
 /* -----------------------Responsive Design for Tablet ------------------------*/
-
 @media only screen and (min-width: 600px) and (max-width: 992px) {
+    /*--------------- Start Newsletter ---------------*/
+    #NewsTop h3 {
+        font-size: 128px;
+    }
+
+    #NewsTop h1 {
+        font-size: 64px;
+    }
+
+    #AllNews {
+        padding: 20px 30px;
+    }
+
+        #AllNews .newsCards .newsCard .newsInfo {
+            width: 53vw;
+        }
+
+            #AllNews .newsCards .newsCard .newsInfo .description {
+                width: auto;
+            }
+
+    #NewsDetail .allDetail {
+        padding: 40px;
+    }
+
+        #NewsDetail .allDetail .newsMainImage {
+            width: 100%;
+        }
+
+        #NewsDetail .allDetail h1 {
+            font-size: 48px;
+        }
+
+        #NewsDetail .allDetail p {
+            font-size: 18px;
+        }
+
+    /* ----------------------------End newsletter */
+
     header {
         width: 100vw;
         padding: 15px 40px;
@@ -4186,15 +4236,15 @@ svg {
             top: 589px;
         }
 
-        #AboutHome .allText .left h3 {
+            /*#AboutHome .allText .left h3 {
             font-size: 16px;
-        }
+        }*/
 
-        #AboutHome .allText .right h3 {
-            position: absolute;
-            right: 40px;
-            width: 516px;
-        }
+            #AboutHome .allText .right h3 {
+                position: absolute;
+                right: 40px;
+                width: 516px;
+            }
 
     #Services {
         height: 926px;
@@ -4287,6 +4337,7 @@ svg {
                 width: 312px !important;
                 position: absolute;
                 left: 0;
+                min-width: 648px;
             }
 
     #News {
@@ -4429,23 +4480,20 @@ svg {
         bottom: 80px;
     }
 
-#Service {
+#Service .all .tab-services {
+    display: flex;
+    align-items: flex-start;
+    gap: -32px;
 }
 
-    #Service .all .tab-services {
+    #Service .all .tab-services .tab-service {
         display: flex;
-        align-items: flex-start;
-        gap: -32px;
+        width: 240px; /*------------------------custom */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
-
-        #Service .all .tab-services .tab-service {
-            display: flex;
-            width: 240px; /*------------------------custom */
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
 
 #ServiceDetail {
     padding: 60px;
@@ -4553,6 +4601,7 @@ svg {
 
 #About .aboutSectionText {
     padding: 60px;
+    height: auto;
 }
 
 /*---------- PARTNERS --------------------*/
@@ -4716,4 +4765,136 @@ a:nth-child(3) svg {
 }
 }
 }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Start newsletter */
+    #AllNews .newsCards .newsCard .newsImage {
+        width: 100px;
+        height: 100px;
+    }
+
+    #AllNews .newsCards .newsCard .newsInfo {
+        height: 100px;
+    }
+
+        #AllNews .newsCards .newsCard .newsInfo .title {
+            overflow: visible;
+            font-size: 13px;
+        }
+
+        #AllNews .newsCards .newsCard .newsInfo .date {
+            overflow: visible;
+            font-size: 13px;
+        }
+
+        #AllNews .newsCards .newsCard .newsInfo .description {
+            overflow: visible;
+            font-size: 13px;
+        }
+
+        #AllNews .newsCards .newsCard .newsInfo a {
+            margin-top: 0px;
+            padding: 8px 14px;
+            width: 105px;
+        }
+
+    #AllNews .newsCards .newsCard {
+        height: 190px;
+        overflow-x: hidden;
+    }
+
+    #AllNews h1 {
+        font-size: 24px;
+    }
+
+    #AllNews .newsCards .newsCard {
+        padding: 10px;
+    }
+
+    #AllNews {
+        padding: 20px 30px;
+    }
+
+        #AllNews .newsCards .newsCard .newsInfo {
+            width: 53vw;
+        }
+
+            #AllNews .newsCards .newsCard .newsInfo .description {
+                width: auto;
+            }
+
+    #NewsDetail .allDetail {
+        padding: 40px;
+    }
+
+        #NewsDetail .allDetail .newsMainImage {
+            width: 100%;
+        }
+
+        #NewsDetail .allDetail h1 {
+            font-size: 48px;
+        }
+
+        #NewsDetail .allDetail p {
+            font-size: 18px;
+        }
+
+    #NewsTop {
+        margin-top: 0px;
+    }
+
+        #NewsTop h1 {
+            font-size: 55px;
+        }
+
+        #NewsTop h3 {
+            font-size: 64px;
+        }
+
+    #AllNews .newsCards .newsCard {
+        gap: 15px;
+    }
+
+        #AllNews .newsCards .newsCard .newsInfo {
+            gap: 2px;
+        }
+
+    #AllNews .newsCards .newsCard {
+        align-items: center;
+    }
+
+    #NewsDetail .allDetail {
+        margin-top: 0px;
+    }
+
+        #NewsDetail .allDetail h1 {
+            font-size: 24px;
+        }
+
+        #NewsDetail .allDetail .newsMainImage {
+            height: 200px;
+        }
+
+        #NewsDetail .allDetail p {
+            font-size: 14px;
+        }
+
+    #NewsDetail .allDetail {
+        padding: 20px;
+    }
+
+    #NewsTop {
+        height: 270px;
+        width: 100vw;
+    }
+
+        #NewsTop h1 {
+            top: 44px;
+        }
+
+        #NewsTop h3 {
+            top: 116px;
+        }
+    /* End newsletter */
 }
