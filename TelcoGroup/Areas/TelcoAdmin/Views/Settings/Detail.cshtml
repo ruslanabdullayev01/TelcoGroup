@@ -1,28 +1,37 @@
 ﻿@model Setting
 <h1>@language.Getkey("SettingDetails")</h1>
-@* 
-@if (Model.Key == language.Getkey("SolutionsPageDescription"))
+
+@if (Model.Key == "SolutionsPageDescription")
 {
     <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("SolutionsPageDescription")</p>
 }
-else if (Model.Key == language.Getkey("PartnersPageDescription"))
+else if (Model.Key == "PartnersPageDescription")
 {
     <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("PartnersPageDescription")</p>
 }
-else if (Model.Key == language.Getkey("Home1"))
+else if (Model.Key == "HeaderTop")
 {
-    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("Home1")</p>
+    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("HeaderTop")</p>
 }
-else if (Model.Key == language.Getkey("Home2"))
+else if (Model.Key == "HeaderMiddle")
 {
-    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("Home2")</p>
+    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("HeaderMiddle")</p>
 }
-else if (Model.Key == language.Getkey("Home3"))
+else if (Model.Key == "HeaderBottom")
 {
-    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("Home3")</p>
+    <p><strong>@language.Getkey("Key"):</strong> @language.Getkey("HeaderBottom")</p>
 }
 
- *@
-<p><strong>@language.Getkey("Value"):</strong> @Html.Raw(Model.Value)</p>
 
-<a asp-action="Index" class="btn btn-secondary">@language.Getkey("GoToBack")</a>
+<div style="display:flex;"><strong>@language.Getkey("Value"): </strong> @Html.Raw(Model.Value)</div>
+
+<a class="btn btn-secondary" id="btnBack" style="cursor:pointer;">@language.Getkey("GoToBack")</a>
+
+@section Scripts{
+    <script>
+        document.getElementById("btnBack").onclick = function () {
+            history.back();
+            return false;
+        };
+    </script>
+}

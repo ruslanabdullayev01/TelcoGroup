@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TelcoGroup.DAL;
 using TelcoGroup.Helpers;
 using TelcoGroup.Models;
@@ -21,7 +22,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         }
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<User> query = _db.Users;
+            IQueryable<User> query = _db.Users.AsNoTracking();
             return View(PageNatedList<User>.Create(query, pageIndex, 10, 10));
         }
 

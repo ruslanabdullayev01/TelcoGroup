@@ -17,10 +17,11 @@ namespace TelcoGroup.Controllers
         public async Task<IActionResult> Index()
         {
             List<Solution> solutions = await _db.Solutions
+                .AsNoTracking()
                 .OrderByDescending(x => x.CreatedAt)
                 .Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name)
                 .ToListAsync();
-            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Header = await _db.Headers.AsNoTracking().FirstOrDefaultAsync(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(solutions);
         }
     }

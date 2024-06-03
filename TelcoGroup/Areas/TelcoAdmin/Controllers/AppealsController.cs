@@ -48,7 +48,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         {
             if (id == null) return NotFound();
 
-            Appeal? appeal = await _db.Appeals.FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
+            Appeal? appeal = await _db.Appeals.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
 
             if (appeal == null) return BadRequest();
 

@@ -42,9 +42,9 @@
                                     <td>
                                         @set.Key
                                     </td>
-                                    <th style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                    <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
                                         @Html.Raw(set.Value)
-                                    </th>
+                                    </td>
                                     <td style="vertical-align: middle; text-align: center; ">
                                         <a asp-action="Detail" asp-route-id="@set.Id" class="btn btn-warning text-white mr-2">@language.Getkey("Details")</a>
                                         <a asp-action="Update" asp-route-id="@set.Id" class="btn btn-info text-white mr-2">@language.Getkey("Update")</a>

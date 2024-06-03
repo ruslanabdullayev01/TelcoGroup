@@ -29,10 +29,10 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Service> query = _db.Services
+            IQueryable<Service> query = _db.Services.AsNoTracking()
                 .Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             ViewBag.DataCount = query.Count();
-            ViewBag.Headers = _db.Headers.Where(x=>x.PageKey=="Services" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Headers = _db.Headers.AsNoTracking().Where(x=>x.PageKey=="Services" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Service>.Create(query, pageIndex, 10, 10));
         }
         #endregion
@@ -214,11 +214,12 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         {
             if (id == null) return NotFound();
 
-            Service? temp = await _db.Services
+            Service? temp = await _db.Services.AsNoTracking()
                 .Include(a => a.Language)
                 .FirstOrDefaultAsync(s => s.IsDeleted == false && s.Id==id);
 
             Service? service = await _db.Services
+                .AsNoTracking()
                 .Include(x => x.Language)
                 .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             if (service == null) return BadRequest();

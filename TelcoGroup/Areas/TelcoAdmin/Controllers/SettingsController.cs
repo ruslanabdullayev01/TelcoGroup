@@ -24,7 +24,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Setting> query = _db.Settings.Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key!= "PartnersPageDescription" && x.Key!= "SolutionsPageDescription")
+            IQueryable<Setting> query = _db.Settings
+                .AsNoTracking()
+                .Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key != "PartnersPageDescription" && x.Key != "SolutionsPageDescription")
                 .OrderByDescending(c => c.Id);
 
             return View(PageNatedList<Setting>.Create(query, pageIndex, 10, 10));
@@ -92,7 +94,10 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
             }
 
             await _db.SaveChangesAsync();
-            return RedirectToAction("Index", "Appeals");
+            if (firstSetting.Key == "PartnersPageDescription") return RedirectToAction("Index", "Partners");
+            if (firstSetting.Key == "SolutionsPageDescription") return RedirectToAction("Index", "Solutions");
+            return RedirectToAction("Index", "Settings");
+
         }
         #endregion
 
@@ -169,11 +174,12 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Detail
         public async Task<IActionResult> Detail(int? id)
         {
-            if(id==null) return NotFound();
+            if (id == null) return NotFound();
 
-            Setting? temp = await _db.Settings.Include(a => a.Language).FirstOrDefaultAsync(x=>x.Id==id);
+            Setting? temp = await _db.Settings.AsNoTracking().Include(a => a.Language).FirstOrDefaultAsync(x => x.Id == id);
 
             Setting? setting = await _db.Settings
+                .AsNoTracking()
                 .Include(x => x.Language)
                 .FirstOrDefaultAsync(x => x.LanguageGroup == temp!.LanguageGroup && x.Language!.Culture == CultureInfo.CurrentCulture.Name); ;
             if (setting == null) return BadRequest();

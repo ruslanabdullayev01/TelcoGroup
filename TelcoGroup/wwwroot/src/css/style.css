@@ -78,7 +78,7 @@ header {
     padding: 15px 60px;
     justify-content: space-between;
     align-items: center;
-    gap: 240px;
+    gap: 200px;
     background: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
@@ -114,7 +114,7 @@ header {
     header .menu {
         display: flex;
         align-items: flex-start;
-        gap: 50px;
+        gap: 45px;
     }
 
         header .menu .text {
@@ -198,7 +198,6 @@ footer {
     width: 1440px;
     height: 362px;
     flex-shrink: 0;
-    border-top: 1px solid gray;
     background: #fefefe;
 }
 
@@ -209,7 +208,7 @@ footer {
         display: flex;
         width: 1300px;
         align-items: flex-start;
-        gap: 370px;
+        gap: 280px;
     }
 
         /* 17.05 added a tag */
@@ -332,6 +331,7 @@ footer {
                         }
 
             footer .footerinfo .footermenu .button {
+                margin-left:20px;
                 color: #fff;
                 text-align: center;
                 font-family: Inter;
@@ -1423,14 +1423,13 @@ footer {
 
 @font-face {
     font-family: "Open Sans Hebrew Condensed";
-    src: url(../fonts/OpenSansHebrewCondensed-Bold.ttf);
+    src: url('../fonts/BebasNeue Bold.otf');
 }
 
 @font-face {
     font-family: "Inter";
     src: url(../fonts/Inter-Regular.ttf);
 }
-
 #FirstService {
     width: 1440px;
     height: 720px;
@@ -1902,7 +1901,7 @@ footer {
                         font-style: normal;
                         font-weight: 300;
                         line-height: 100%;
-                        margin-top: 26px;
+                        /*margin-top: 26px;*/
                         /* 30px */
                     }
 
@@ -2265,7 +2264,7 @@ footer {
         font-style: normal;
         font-weight: 700;
         line-height: 100%;
-        width: 869px;
+        width: 100%;
     }
 
     #Intro h2 {
@@ -2273,7 +2272,7 @@ footer {
         top: 221px;
         /*left: calc((100vw - 643px) / 2);*/
         display: flex;
-        width: 643px;
+        width: 660px;
         height: 123px;
         flex-direction: column;
         justify-content: center;
@@ -2295,6 +2294,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 100px;
+    background-color: #f4f4f4;
 }
 
     #SolutionGroups .intro {
@@ -2662,6 +2662,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
+    background-color: #f4f4f4;
 }
 
     #AllNews h1 {
@@ -2729,6 +2730,7 @@ footer {
                     font-style: normal;
                     font-weight: 500;
                     line-height: 150%;
+                    margin-top:8px;
                     /* 24px */
                 }
 
@@ -2742,11 +2744,12 @@ footer {
                     font-style: normal;
                     font-weight: 500;
                     line-height: 150%;
+                    margin-top: 8px;
                     /* 24px */
                 }
 
                 #AllNews .newsCards .newsCard .newsInfo a {
-                    margin-top: 36.5px;
+                    margin-top: 15.5px;
                     display: inline-flex;
                     height: 32px;
                     padding: 10px 20px;
@@ -2770,6 +2773,7 @@ footer {
     height: auto;
     margin: 0 auto;
     position: relative;
+    background-color: #f4f4f4;
 }
 
     #NewsDetail .allDetail {
@@ -2817,7 +2821,7 @@ footer {
 
 .rightNav {
     position: absolute;
-    top: 151px;
+    top: 245px;
     right: 8px;
     display: inline-flex;
     padding: 8px 0px;
@@ -2870,6 +2874,19 @@ footer {
 
 /* ----------------------Responsive Design for Mobile----------------------------------------- */
 @media only screen and (max-width: 992px) {
+    #ContactHead .overlay .contactInfos .allInfo .adress svg {
+        margin-top: -22px;
+    }
+
+    #ContactHead .overlay .contactInfos .allInfo .adress p {
+        width: 70%;
+        margin-top: 0;
+    }
+
+    #ContactHead .overlay .contactInfos .allInfo .adress {
+        height: auto;
+        margin-top:8px;
+    }
     body {
         display: flex;
         width: 100vw !important;
@@ -3774,6 +3791,7 @@ img {
     width: 100vw;
     padding: 30px 0;
     gap: 40px;
+    background-color: #f4f4f4;
 }
 
     #SolutionGroups .intro {
@@ -4102,6 +4120,7 @@ svg {
 
     #AllNews {
         padding: 20px 30px;
+        background-color: #f4f4f4;
     }
 
         #AllNews .newsCards .newsCard .newsInfo {
@@ -4532,9 +4551,13 @@ svg {
             bottom: 30px;
         }
 
-        #ContactHead .overlay .contactInfos .socialMedia {
-            right: 28px;
-        }
+            #ContactHead .overlay .contactInfos .allInfo .adress{
+                margin-top:0px;
+            }
+
+            #ContactHead .overlay .contactInfos .socialMedia {
+                right: 28px;
+            }
 
     #ContactHead .overlay .titleText h1 {
         left: -64px;
@@ -4814,6 +4837,7 @@ a:nth-child(3) svg {
 
     #AllNews {
         padding: 20px 30px;
+        background-color: #f4f4f4;
     }
 
         #AllNews .newsCards .newsCard .newsInfo {
@@ -4859,10 +4883,6 @@ a:nth-child(3) svg {
         #AllNews .newsCards .newsCard .newsInfo {
             gap: 2px;
         }
-
-    #AllNews .newsCards .newsCard {
-        align-items: center;
-    }
 
     #NewsDetail .allDetail {
         margin-top: 0px;

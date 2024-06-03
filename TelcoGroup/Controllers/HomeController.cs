@@ -30,26 +30,32 @@ namespace TelcoGroup.Controllers
         {
             HomeVM homeVM = new HomeVM()
             {
-                AboutUs = await _db.AboutUs.FirstOrDefaultAsync(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name),
-                PartnerSliders = await _db.PartnerSliders.Where(x => !x.IsDeleted).ToListAsync(),
+                AboutUs = await _db.AboutUs
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name),
+                PartnerSliders = await _db.PartnerSliders.AsNoTracking().Where(x => !x.IsDeleted).ToListAsync(),
                 LatestNews = await _db.News
-                .OrderByDescending(x => x.CreatedAt)
-                .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
-                .Take(4)
-                .ToListAsync(),
+                    .AsNoTracking()
+                    .OrderByDescending(x => x.CreatedAt)
+                    .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
+                    .Take(4)
+                    .ToListAsync(),
                 Services = await _db.Services
+                    .AsNoTracking()
                     .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
                     .OrderByDescending(x => x.CreatedAt)
                     .Take(4)
                     .ToListAsync(),
                 Solutions = await _db.Solutions
-                .OrderByDescending(x => x.CreatedAt)
-                .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
-                .Take(4)
-                .ToListAsync(),
+                    .AsNoTracking()
+                    .OrderByDescending(x => x.CreatedAt)
+                    .Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
+                    .Take(4)
+                    .ToListAsync(),
                 MainNews = await _db.News
-                .Where(x=>!x.IsDeleted && x.IsMain && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
-                .FirstOrDefaultAsync()
+                    .AsNoTracking()
+                    .Where(x=>!x.IsDeleted && x.IsMain && x.Language!.Culture == CultureInfo.CurrentCulture.Name)
+                    .FirstOrDefaultAsync()
             };
             return View(homeVM);
         }

@@ -28,7 +28,7 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<PartnerSlider> query = _db.PartnerSliders.Where(x => !x.IsDeleted);
+            IQueryable<PartnerSlider> query = _db.PartnerSliders.AsNoTracking().Where(x => !x.IsDeleted);
             return View(PageNatedList<PartnerSlider>.Create(query, pageIndex, 10, 10));
         }
         #endregion

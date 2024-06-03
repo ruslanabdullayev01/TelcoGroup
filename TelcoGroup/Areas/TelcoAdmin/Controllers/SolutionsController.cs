@@ -26,9 +26,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         [HttpGet]
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Solution> query = _db.Solutions.Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
+            IQueryable<Solution> query = _db.Solutions.AsNoTracking().Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             ViewBag.Setting = _db.Settings.Where(x => x.Language.Culture == CultureInfo.CurrentCulture.Name && x.Key == "SolutionsPageDescription").AsNoTracking();
-            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Headers = _db.Headers.AsNoTracking().Where(x => x.PageKey == "Solutions" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Solution>.Create(query, pageIndex, 10, 10));
         }
         #endregion
@@ -131,12 +131,12 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
                 return NotFound();
             }
 
-            Solution? temp = await _db.Solutions.Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false && s.Id == id);
+            Solution? temp = await _db.Solutions.AsNoTracking().Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false && s.Id == id);
             if (temp == null) return NotFound();
 
-            Solution? solution = await _db.Solutions
+            Solution? solution = await _db.Solutions.AsNoTracking()
                 .Include(x => x.Language)
-                .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language.Culture == CultureInfo.CurrentCulture.Name); ;
+                .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             if (solution == null) return BadRequest();
             return View(solution);
         }

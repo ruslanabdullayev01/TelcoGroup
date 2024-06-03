@@ -17,7 +17,7 @@
 </section>
 
 <section id="PartnersBody">
-    <p>@Html.Raw(settings.FirstOrDefault(s => s.Key == "PartnersPageDescription" && s.Language.Culture == currentCulture)?.Value)</p>
+    <div>@Html.Raw(settings.FirstOrDefault(s => s.Key == "PartnersPageDescription" && s.Language!.Culture == currentCulture)?.Value)</div>
 
     <div class="allPartners">
         @foreach (var item in Model)

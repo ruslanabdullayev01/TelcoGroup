@@ -16,9 +16,9 @@
 </section>
 
 <section id="SolutionGroups">
-    <p class="intro">
+    <div class="intro">
         @Html.Raw(settings.FirstOrDefault(s => s.Key == "SolutionsPageDescription" && s.Language?.Culture == currentCulture)?.Value)
-    </p>
+    </div>
 
     @if (Model.Count > 0)
     {
@@ -29,9 +29,9 @@
                 <div class="solutionCard solutionSecondCard">
                     <div class="solutionText">
                         <h1 class="title secondTitle">@item.Title</h1>
-                        <p class="subtitle secondSubtitle">
+                        <div class="subtitle secondSubtitle">
                             @Html.Raw(item.Description)
-                        </p>
+                        </div>
                     </div>
                     <div class="rectangle nonReversed"></div>
                 </div>
@@ -41,9 +41,9 @@
                 <div class="solutionCard reversed">
                     <div class="solutionText">
                         <h1 class="title">@item.Title</h1>
-                        <p class="subtitle">
+                        <div class="subtitle">
                             @Html.Raw(item.Description)
-                        </p>
+                        </div>
                     </div>
                     <div class="rectangle"></div>
                 </div>

@@ -16,8 +16,8 @@ namespace TelcoGroup.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            AboutUs? aboutUs = await _db.AboutUs.FirstOrDefaultAsync(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
-            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "About" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            AboutUs? aboutUs = await _db.AboutUs.AsNoTracking().FirstOrDefaultAsync(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Header = await _db.Headers.AsNoTracking().FirstOrDefaultAsync(x => x.PageKey == "About" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(aboutUs);
         }
     }

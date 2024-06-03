@@ -19,9 +19,9 @@ namespace TelcoGroup.Controllers
         {
             ContactUsVM contactVM = new ContactUsVM()
             {
-                Bio = await _db.Bios.FirstOrDefaultAsync(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name),
+                Bio = await _db.Bios.AsNoTracking().FirstOrDefaultAsync(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name),
             };
-            ViewBag.Header = await _db.Headers.FirstOrDefaultAsync(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Header = await _db.Headers.AsNoTracking().FirstOrDefaultAsync(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(contactVM);
         }
     }

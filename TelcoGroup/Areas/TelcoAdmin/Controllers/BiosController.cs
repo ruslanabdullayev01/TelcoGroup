@@ -25,9 +25,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Bio> query = _db.Bios.Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
+            IQueryable<Bio> query = _db.Bios.AsNoTracking().Where(x => !x.IsDeleted && x.Language.Culture == CultureInfo.CurrentCulture.Name);
             ViewBag.DataCount = query.Count();
-            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Headers = _db.Headers.AsNoTracking().Where(x => x.PageKey == "Contact" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Bio>.Create(query, pageIndex, 5, 5));
         }
         #endregion
@@ -147,9 +147,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
                 return NotFound();
             }
 
-            Bio temp = await _db.Bios.Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false);
+            Bio? temp = await _db.Bios.AsNoTracking().Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false);
 
-            Bio? bio = await _db.Bios
+            Bio? bio = await _db.Bios.AsNoTracking()
                 .Include(x => x.Language)
                 .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language.Culture == CultureInfo.CurrentCulture.Name); ;
             if (bio == null) return BadRequest();

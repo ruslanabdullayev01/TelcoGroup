@@ -27,7 +27,7 @@
             <div class="cardTextDetails">
                 <h1>@Html.Raw(Model.MainNews?.Title)</h1>
                 <h2>@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(0, 1).ToUpper()@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(1)</h2>
-                <p>@Html.Raw(Model.MainNews?.Description)</p>
+                <div>@Html.Raw(Model.MainNews?.Description)</div>
             </div>
             <div class="textUnderline">
                 <a asp-controller="News" asp-action="Detail" asp-route-id="@Model.MainNews?.Id">@language.Getkey("ReadMore")</a>

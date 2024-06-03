@@ -29,8 +29,8 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<News> query = _db.News.Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
-            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "News" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            IQueryable<News> query = _db.News.AsNoTracking().Where(x => !x.IsDeleted && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            ViewBag.Headers = _db.Headers.AsNoTracking().Where(x => x.PageKey == "News" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<News>.Create(query, pageIndex, 10, 10));
         }
 
@@ -223,10 +223,10 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
                 return NotFound();
             }
 
-            News? temp = await _db.News.Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false && s.Id == id);
+            News? temp = await _db.News.AsNoTracking().Include(a => a.Language).FirstOrDefaultAsync(s => s.IsDeleted == false && s.Id == id);
             if (temp == null) return NotFound();
 
-            News? news = await _db.News
+            News? news = await _db.News.AsNoTracking()
                 .Include(x => x.Language)
                 .FirstOrDefaultAsync(x => x.LanguageGroup == temp.LanguageGroup && x.Language!.Culture == CultureInfo.CurrentCulture.Name); ;
             if (news == null) return BadRequest();

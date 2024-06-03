@@ -29,9 +29,9 @@ namespace TelcoGroup.Areas.TelcoAdmin.Controllers
         #region Index
         public IActionResult Index(int pageIndex = 1)
         {
-            IQueryable<Partner> query = _db.Partners.Where(x => !x.IsDeleted);
-            ViewBag.Setting = _db.Settings.Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key == "PartnersPageDescription").AsNoTracking();
-            ViewBag.Headers = _db.Headers.Where(x => x.PageKey == "Partners" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
+            IQueryable<Partner> query = _db.Partners.AsNoTracking().Where(x => !x.IsDeleted);
+            ViewBag.Setting = _db.Settings.AsNoTracking().Where(x => x.Language!.Culture == CultureInfo.CurrentCulture.Name && x.Key == "PartnersPageDescription");
+            ViewBag.Headers = _db.Headers.AsNoTracking().Where(x => x.PageKey == "Partners" && x.Language!.Culture == CultureInfo.CurrentCulture.Name);
             return View(PageNatedList<Partner>.Create(query, pageIndex, 10, 10));
         }
         #endregion
