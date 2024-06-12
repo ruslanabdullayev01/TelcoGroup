@@ -26,7 +26,7 @@
         <div class="cardDetails">
             <div class="cardTextDetails">
                 <h1>@Html.Raw(Model.MainNews?.Title)</h1>
-                <h2>@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(0, 1).ToUpper()@Model.MainNews.CreatedAt.ToString("MMMM dd, yyyy").Substring(1)</h2>
+                <h2>@Model.MainNews?.CreatedAt.ToString("MMMM dd, yyyy").Substring(0, 1).ToUpper()@Model.MainNews?.CreatedAt.ToString("MMMM dd, yyyy").Substring(1)</h2>
                 <div>@Html.Raw(Model.MainNews?.Description)</div>
             </div>
             <div class="textUnderline">
@@ -85,7 +85,7 @@
 <section id="Complexity">
 
     <div class="complexityTexts">
-        <h1>@language.Getkey("SolvingComplexityDeliveringSimplicity")</h1>
+        <h1>@Html.Raw(settings.FirstOrDefault(s => s.Key == "SolutionsTitle" && s.Language!.Culture == currentCulture)?.Value)</h1>
         <div class="textVsButton">
             @if (Model.Solutions != null)
             {
